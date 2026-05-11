@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Converge — Application for Membership. A structured courtship platform for adults ready to build a life together."/>
+  <title>Converge — Application for Membership</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+  <!-- ── APP HEADER ── -->
+  <header class="app-header">
+    <a href="index.html" class="nav-logo">C O N V E R G E</a>
+    <span class="header-section-label" id="header-section-name">Application for Membership</span>
+  </header>
+
+  <!-- ── PROGRESS BAR ── -->
+  <div class="progress-bar-wrap" id="progress-wrap">
+    <div class="progress-steps" id="progress-steps"></div>
+    <span class="progress-pct" id="progress-pct">0%</span>
+  </div>
+
+  <!-- ── MAIN ── -->
+  <main class="app-main">
+
+    <!-- ══════════════════ PREAMBLE ══════════════════ -->
+    <div id="screen-preamble" class="screen active">
+      <div class="preamble-inner">
+
+        <svg class="preamble-motif" width="72" height="52" viewBox="0 0 72 52" fill="none" aria-hidden="true">
+          <line x1="0"  y1="0" x2="36" y2="46" stroke="#0f1623" stroke-width="1.2"/>
+          <line x1="72" y1="0" x2="36" y2="46" stroke="#0f1623" stroke-width="1.2"/>
+          <line x1="14" y1="0" x2="36" y2="46" stroke="#0f1623" stroke-width="0.5"/>
+          <line x1="58" y1="0" x2="36" y2="46" stroke="#0f1623" stroke-width="0.5"/>
+          <circle cx="36" cy="46" r="3.5" fill="#b09e87"/>
+          <circle cx="36" cy="46" r="9"   stroke="#b09e87" stroke-width="0.5" opacity="0.4"/>
+        </svg>
+
+        <h1 class="preamble-title">Application for<br/><em>Membership</em></h1>
+
+        <div class="preamble-statement">
+          This application requires reflection.<br/>
+          Set aside approximately 30–40 minutes.<br/>
+          Close distractions.<br/>
+          Approach this intentionally.
+        </div>
+
+        <div class="preamble-meta">
+          <div class="meta-item">
+            <span class="meta-num">6</span>
+            <span class="meta-label">Sections</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-num">30–40</span>
+            <span class="meta-label">Minutes</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-num">$650</span>
+            <span class="meta-label">Annual / On Acceptance</span>
+          </div>
+        </div>
+
+        <button class="btn-begin" onclick="goToSection(0)">Begin Application</button>
+      </div>
+    </div>
+
+    <!-- ══════════════════ SECTION 1 ══════════════════ -->
+    <div id="screen-0" class="screen">
+      <div class="section-screen">
+        <div class="section-header">
+          <p class="section-eyebrow">Section 1 of 6</p>
+          <h2 class="section-title-app">Intention &amp; Readiness</h2>
+          <p class="section-intent">This section determines whether your orientation toward partnership is compatible with the Converge framework. There are no right answers — only honest ones.</p>
+        </div>
+
+        <!-- Q1 -->
+        <div class="field-group">
+          <label class="field-label">What are you here for?</label>
+          <div class="radio-group" id="q1-group">
+            <label class="radio-card" onclick="selectRadio('q1-group','marriage')">
+              <input type="radio" name="q1" value="marriage"/>
+              <div class="radio-card-label">Long-term partnership leading to marriage</div>
+            </label>
+            <label class="radio-card" onclick="selectRadio('q1-group','open')">
+              <input type="radio" name="q1" value="open"/>
+              <div class="radio-card-label">Long-term partnership — marriage open</div>
+            </label>
+            <label class="radio-card" onclick="selectRadio('q1-group','unsure')">
+              <input type="radio" name="q1" value="unsure"/>
+              <div class="radio-card-label">I am not certain yet</div>
+            </label>
+          </div>
+          <div class="callout" id="q1-note" style="display:none">
+            <strong>Note:</strong> Converge prioritizes applicants who are actively marriage-minded. Ambivalence about direction is not disqualifying, but it will be weighed during review.
+          </div>
+        </div>
+
+        <hr class="field-divider"/>
+
+        <!-- Q2 -->
+        <div class="field-group">
+          <label class="field-label">If you met the right person, how soon would you want to begin building a life together?</label>
+          <div class="radio-row" id="q2-group">
+            <label class="radio-pill" onclick="selectPill('q2-group',this)"><input type="radio" name="q2" value="1-2yr"/>1–2 years</label>
+            <label class="radio-pill" onclick="selectPill('q2-group',this)"><input type="radio" name="q2" value="3-5yr"/>3–5 years</label>
+            <label class="radio-pill" onclick="selectPill('q2-group',this)"><input type="radio" name="q2" value="flex"/>Flexible but intentional</label>
+          </div>
+        </div>
+
+        <hr class="field-divider"/>
+
+        <!-- Q3 -->
+        <div class="field-group">
+          <label class="field-label">Are you open to relocating for the right partnership?</label>
+          <div class="radio-row" id="q3-group">
+            <label class="radio-pill" onclick="selectPill('q3-group',this)"><input type="radio" name="q3" value="yes"/>Yes</label>
+            <label class="radio-pill" onclick="selectPill('q3-group',this)"><input type="radio" name="q3" value="possibly"/>Possibly</label>
+            <label class="radio-pill" onclick="selectPill('q3-group',this)"><input type="radio" name="q3" value="no"/>No</label>
+          </div>
+        </div>
+
+        <hr class="field-divider"/>
+
+        <!-- Q4 -->
+        <div class="field-group">
+          <label class="field-label">What prompted you to apply to Converge at this stage of your life?</label>
+          <span class="field-sublabel">150–300 words. Be specific. Generic answers are noted.</span>
+          <textarea id="q4-text" rows="6" placeholder="Reflect on where you are, and why this, now." oninput="countWords(this,'q4-wc',150,300)"></textarea>
+          <div class="word-count" id="q4-wc">0 words</div>
+        </div>
+
+        <div class="nav-actions">
+          <button class="btn-back" onclick="goToPreamble()">← Back</button>
+          <button class="btn-next" onclick="goToSection(1)">Continue →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════ SECTION 2 ══════════════════ -->
+    <div id="screen-1" class="screen">
+      <div class="section-screen">
+        <div class="section-header">
+          <p class="section-eyebrow">Section 2 of 6</p>
+          <h2 class="section-title-app">Relationship History<br/>&amp; Self-Awareness</h2>
+          <p class="section-intent">This section is not an audit. It is an opportunity to demonstrate that you have reflected on your own patterns with honesty and without self-deception.</p>
+        </div>
+
+        <!-- Q5 -->
+        <div class="field-group">
+          <label class="field-label">Describe your most recent serious relationship. What ended it?</label>
+          <span class="field-sublabel">200–400 words. Be honest rather than diplomatic.</span>
+          <textarea id="q5-text" rows="8" placeholder="What it was. What it became. What ended it." oninput="countWords(this,'q5-wc',200,400)"></textarea>
+          <div class="word-count" id="q5-wc">0 words</div>
+        </div>
+
+        <hr class="field-divider"/>
+
+        <!-- Q6 -->
+        <div class="field-group">
+          <label class="field-label">What part of that ending was yours?</label>
+          <span class="field-sublabel">150–300 words. Accountability, not self-flagellation.</span>
+          <textarea id="q6-text" rows="6" placeholder="What you contributed. What you understand now that you did not then." oninput="countWords(this,'q6-wc',150,300)"></textarea>
+          <div class="word-count" id="q6-wc">0 words</div>
+        </div>
+
+        <hr class="field-divider"/>
+
+        <!-- Q7 -->
+        <div class="field-group">
+          <label class="field-label">What pattern in your relationships are you actively working on?</label>
+          <span class="field-sublabel">Short answer. Specific is better than vague.</span>
+          <textarea id="q7-text" rows="3" placeholder="A tendency, a habit, a default response." oninput="countWords(this,'q7-wc',0,120)"></textarea>
+          <div class="word-count" id="q7-wc">0 words</div>
+        </div>
+
+        <hr class="field-divider"/>
+
+        <!-- Q8 -->
+        <div class="field-group">
+          <label class="field-label">When conflict arises, your instinct is to:</label>
+          <div class="radio-group" id="q8-group">
+            <label class="radio-card" onclick="selectRadio('q8-group','direct')">
+              <input type="radio" name="q8" value="direct"/>
+              <div class="radio-card-label">Address it directly</div>
+            </label>
+            <label class="radio-card" onclick="selectRadio('q8-group','withdraw')">
+              <input type="radio" name="q8" value="withdraw"/>
+              <div class="radio-card-label">Withdraw until I have processed</div>
+            </label>
+            <label class="radio-card" onclick="selectRadio('q8-group','compromise')">
+              <input type="radio" name="q8" value="compromise"/>
+              <div class="radio-card-label">Seek compromise before full expression</div>
+            </label>
+            <label class="radio-card" onclick="selectRadio('q8-group','avoid')">
+              <input type="radio" name="q8" value="avoid"/>
+              <div class="radio-card-label">Avoid until it becomes unavoidable</div>
+            </label>
+            <label class="radio-card" onclick="selectRadio('q8-group','other')">
+              <input type="radio" name="q8" value="other"/>
+              <div class="radio-card-label">Other — please explain below</div>
+            </label>
+          </div>
+          <div id="q8-other-wrap" style="display:none;margin-top:12px">
+            <textarea id="q8-other" rows="2" placeholder="Describe your instinct."></textarea>
+          </div>
+        </div>
+
+        <hr class="field-divider"/>
+
+        <!-- Q9 -->
+        <div class="field-group">
+          <label class="field-label">What did love look like in your home growing up?</label>
+          <span class="field-note">Optional, but encouraged. This is for reflection, not diagnosis.</span>
+          <textarea id="q9-text" rows="4" placeholder="How affection was expressed. What partnership looked like. What was modelled for you." oninput="countWords(this,'q9-wc',0,250)"></textarea>
+          <div class="word-count" id="q9-wc">0 words</div>
+        </div>
+
+        <div class="nav-actions">
+          <button class="btn-back" onclick="goToSection(0)">← Back</button>
+          <button class="btn-next" onclick="goToSection(2)">Continue →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════ SECTION 3 ══════════════════ -->
+    <div id="screen-2" class="screen">
+      <div class="section-screen">
+        <div class="section-header">
+          <p class="section-eyebrow">Section 3 of 6</p>
+          <h2 class="section-title-app">Values &amp;<br/>Life Design</h2>
+          <p class="section-intent">Lasting compatibility is built on aligned values and shared life direction. This section asks you to articulate yours with specificity.</p>
+        </div>
+
+        <!-- Values Ranking -->
+        <div class="field-group">
+          <label class="field-label">Rank these values in order of importance to your life.</label>
+          <span class="field-sublabel">Drag to reorder. Your first five are weighted most heavily in the matching process.</span>
+          <p class="rank-hint">Drag items to arrange from most to least important.</p>
+          <div class="rank-list" id="rank-list"></div>
+        </div>
+
+        <hr class="field-divider"/>
+
+        <!-- Location -->
+        <div class="field-group">
+          <label class="field-label">Where do you want to live in 5–10 years?</label>
+          <span class="field-sublabel">City, region, or general context. Used for geographic compatibility.</span>
+          <input type="text" id="q10-loc" placeholder="e.g. Major city in North America, rural New England, flexible internationally"/>
+        </div>
+
+        <hr class="field-divider"/>
+
+        <!-- Children -->
+        <div class="field-group">
+          <label class="field-label">Do you want children?</label>
+          <div class="radio-row" id="q11-group">
+            <label class="radio-pill" onclick="selectPill('q11-group',this)"><input type="radio" name="q11" value="yes"/>Yes</label>
+            <label class="radio-pill" onclick="selectPill('q11-group',this)"><input type="radio" name="q11" value="no"/>No</label>
+            <label class="radio-pill" onclick="selectPill('q11-group',this)"><input type="radio" name="q11" value="undecided"/>Undecided</label>
+            <label class="radio-pill" onclick="selectPill('q11-group',this)"><input type="radio" name="q11" value="open-partner"/>Open to a partner with children</label>
+          </div>
+        </div>
+
+        <hr class="field-divider"/>
+
+        <!-- Stable life -->
+        <div class="field-group">
+          <label class="field-label">What does a stable life mean to you?</label>
+          <span class="field-sublabel">A short reflection. There are many valid answers.</span>
+          <textarea id="q12-text" rows="4" placeholder="How you define stability — financially, emotionally, geographically, structurally." oninput="countWords(this,'q12-wc',0,200)"></textarea>
+          <div class="word-count" id="q12-wc">0 words</div>
+        </div>
+
+        <hr class="field-divider"/>
+
+        <!-- Non-negotiables -->
+        <div class="field-group">
+          <label class="field-label">What are your three true non-negotiables in a partner?</label>
+          <span class="field-sublabel">Limit to three. Not preferences — conditions.</span>
+          <div class="nn-inputs">
+            <div class="nn-row">
+              <span class="nn-num">01</span>
+              <input type="text" id="nn1" placeholder="First non-negotiable"/>
+            </div>
+            <div class="nn-row">
+              <span class="nn-num">02</span>
+              <input type="text" id="nn2" placeholder="Second non-negotiable"/>
+            </div>
+            <div class="nn-row">
+              <span class="nn-num">03</span>
+              <input type="text" id="nn3" placeholder="Third non-negotiable"/>
+            </div>
+          </div>
+        </div>
+
+        <hr class="field-divider"/>
+
+        <!-- False preferences -->
+        <div class="field-group">
+          <label class="field-label">What preference have you held in the past that may not actually matter long-term?</label>
+          <span class="field-sublabel">A short, honest answer. This signals self-awareness.</span>
+          <textarea id="q13-text" rows="3" placeholder="A quality, trait, or circumstance you once screened for that you have since reconsidered." oninput="countWords(this,'q13-wc',0,150)"></textarea>
+          <div class="word-count" id="q13-wc">0 words</div>
+        </div>
+
+        <div class="nav-actions">
+          <button class="btn-back" onclick="goToSection(1)">← Back</button>
+          <button class="btn-next" onclick="goToSection(3)">Continue →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════ SECTION 4 ══════════════════ -->
+    <div id="screen-3" class="screen">
+      <div class="section-screen">
+        <div class="section-header">
+          <p class="section-eyebrow">Section 4 of 6</p>
+          <h2 class="section-title-app">Personality &amp;<br/>Compatibility Snapshot</h2>
+          <p class="section-intent">This section informs the matching process. Results are not displayed to you or to potential matches. They are used internally to assess compatibility of temperament.</p>
+        </div>
+
+        <!-- Likert -->
+        <div class="field-group">
+          <label class="field-label">Rate your agreement with each statement.</label>
+          <span class="field-sublabel">1 = Strongly disagree &nbsp;·&nbsp; 5 = Strongly agree. Answer instinctively — not aspirationally.</span>
+          <br/><br/>
+          <table class="likert-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
+              </tr>
+            </thead>
+            <tbody id="likert-body"></tbody>
+          </table>
+        </div>
+
+        <hr class="field-divider"/>
+
+        <!-- Conflict Style -->
+        <div class="field-group">
+          <label class="field-label">Conflict Style — Situational Index</label>
+          <span class="field-sublabel">For each scenario, select the response that most accurately reflects your behavior — not your ideal behavior.</span>
+          <div id="conflict-questions" style="margin-top:32px;display:flex;flex-direction:column;gap:40px;"></div>
+        </div>
+
+        <div class="nav-actions">
+          <button class="btn-back" onclick="goToSection(2)">← Back</button>
+          <button class="btn-next" onclick="goToSection(4)">Continue →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════ SECTION 5 ══════════════════ -->
+    <div id="screen-4" class="screen">
+      <div class="section-screen">
+        <div class="section-header">
+          <p class="section-eyebrow">Section 5 of 6</p>
+          <h2 class="section-title-app">Practical<br/>Alignment</h2>
+          <p class="section-intent">Compatibility extends to how you live day-to-day. This section addresses practical life structure and your readiness to participate in the Converge process.</p>
+        </div>
+
+        <!-- Work style -->
+        <div class="field-group">
+          <label class="field-label">How would you describe your work arrangement?</label>
+          <div class="radio-group" id="q14-group">
+            <label class="radio-card" onclick="selectRadio('q14-group','9-5')">
+              <input type="radio" name="q14" value="9-5"/>
+              <div class="radio-card-label">Standard schedule — predictable hours</div>
+            </label>
+            <label class="radio-card" onclick="selectRadio('q14-group','entrepreneur')">
+              <input type="radio" name="q14" value="entrepreneur"/>
+              <div class="radio-card-label">Entrepreneur or self-directed — irregular hours</div>
+            </label>
+            <label class="radio-card" onclick="selectRadio('q14-group','remote')">
+              <input type="radio" name="q14" value="remote"/>
+              <div class="radio-card-label">Remote — location independent</div>
+            </label>
+            <label class="radio-card" onclick="selectRadio('q14-group','travel')">
+              <input type="radio" name="q14" value="travel"/>
+              <div class="radio-card-label">Travel-heavy — frequent or extended travel</div>
+            </label>
+            <label class="radio-card" onclick="selectRadio('q14-group','shift')">
+              <input type="radio" name="q14" value="shift"/>
+              <div class="radio-card-label">Shift-based or irregular schedule</div>
+            </label>
+          </div>
+        </div>
+
+        <hr class="field-divider"/>
+
+        <!-- Schedule flexibility -->
+        <div class="field-group">
+          <label class="field-label">How flexible is your weekly schedule?</label>
+          <div class="radio-row" id="q15-group">
+            <label class="radio-pill" onclick="selectPill('q15-group',this)"><input type="radio" name="q15" value="structured"/>Highly structured</label>
+            <label class="radio-pill" onclick="selectPill('q15-group',this)"><input type="radio" name="q15" value="moderate"/>Moderate flexibility</label>
+            <label class="radio-pill" onclick="selectPill('q15-group',this)"><input type="radio" name="q15" value="flexible"/>Highly flexible</label>
+          </div>
+        </div>
+
+        <hr class="field-divider"/>
+
+        <!-- Active connections -->
+        <div class="field-group">
+          <label class="field-label">How many active connections are you willing to maintain simultaneously?</label>
+          <span class="field-sublabel">Converge permits a maximum of three. This question gauges your orientation.</span>
+          <div class="radio-row" id="q16-group">
+            <label class="radio-pill" onclick="selectPill('q16-group',this)"><input type="radio" name="q16" value="1"/>One at a time</label>
+            <label class="radio-pill" onclick="selectPill('q16-group',this)"><input type="radio" name="q16" value="2"/>Up to two</label>
+            <label class="radio-pill" onclick="selectPill('q16-group',this)"><input type="radio" name="q16" value="3"/>Up to three</label>
+          </div>
+          <div class="callout" style="margin-top:16px">
+            The connection limit is a feature of Converge, not a restriction. It reflects the quality of attention each person deserves.
+          </div>
+        </div>
+
+        <hr class="field-divider"/>
+
+        <!-- Exclusivity readiness -->
+        <div class="field-group">
+          <label class="field-label">If you move into Exclusive Exploration with someone, are you prepared to close all other active connections?</label>
+          <div class="radio-row" id="q17-group">
+            <label class="radio-pill" onclick="selectPill('q17-group',this)"><input type="radio" name="q17" value="yes"/>Yes — I understand this is required</label>
+            <label class="radio-pill" onclick="selectPill('q17-group',this)"><input type="radio" name="q17" value="no"/>No — I am not prepared for this</label>
+          </div>
+          <div class="callout" id="q17-warn" style="display:none;margin-top:12px">
+            <strong>Important:</strong> Exclusive Exploration requires closing other connections without exception. Please consider whether you are ready to proceed before continuing.
+          </div>
+        </div>
+
+        <div class="nav-actions">
+          <button class="btn-back" onclick="goToSection(3)">← Back</button>
+          <button class="btn-next" onclick="goToSection(5)">Continue →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════ SECTION 6 ══════════════════ -->
+    <div id="screen-5" class="screen">
+      <div class="section-screen">
+        <div class="section-header">
+          <p class="section-eyebrow">Section 6 of 6</p>
+          <h2 class="section-title-app">Culture &amp;<br/>Conduct Agreement</h2>
+          <p class="section-intent">These are not aspirational commitments. They are conditions of membership. Read each one before confirming.</p>
+        </div>
+
+        <!-- Contact info -->
+        <div class="field-group">
+          <label class="field-label">Your name and email address</label>
+          <span class="field-sublabel">For admission communication only. Identity verification occurs after acceptance.</span>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px">
+            <input type="text"  id="fname" placeholder="First name"    style="flex:1;min-width:180px"/>
+            <input type="text"  id="lname" placeholder="Last name"     style="flex:1;min-width:180px"/>
+          </div>
+          <input type="email" id="email" placeholder="Email address"/>
+        </div>
+
+        <hr class="field-divider"/>
+
+        <!-- Agreements -->
+        <div class="field-group">
+          <label class="field-label">Our Standards — Acknowledgment</label>
+          <span class="field-sublabel">All boxes must be confirmed before submission.</span>
+          <br/><br/>
+          <div class="agreement-list" id="agreement-list">
+            <label class="agreement-item" onclick="toggleAgreement(this)">
+              <input type="checkbox" name="agree" value="audio"/>
+              <span class="agreement-text">I understand that the first two calls within Converge are audio-only. Video is not available until Exclusive Exploration is entered by mutual decision.</span>
+            </label>
+            <label class="agreement-item" onclick="toggleAgreement(this)">
+              <input type="checkbox" name="agree" value="off-platform"/>
+              <span class="agreement-text">I understand that requesting off-platform contact — social handles, phone numbers, or other identifiers — during early call stages is not permitted and may result in removal.</span>
+            </label>
+            <label class="agreement-item" onclick="toggleAgreement(this)">
+              <input type="checkbox" name="agree" value="conduct"/>
+              <span class="agreement-text">I understand that explicit sexual behavior or communication during the early stages of courtship results in immediate and permanent removal from the platform.</span>
+            </label>
+            <label class="agreement-item" onclick="toggleAgreement(this)">
+              <input type="checkbox" name="agree" value="exclusivity"/>
+              <span class="agreement-text">I understand that entering Exclusive Exploration requires closing all other active connections before proceeding. This is a condition, not a preference.</span>
+            </label>
+            <label class="agreement-item" onclick="toggleAgreement(this)">
+              <input type="checkbox" name="agree" value="endings"/>
+              <span class="agreement-text">I agree to end connections directly and respectfully through the platform. I will not disappear or otherwise avoid acknowledgment of a person's time and engagement.</span>
+            </label>
+            <label class="agreement-item" onclick="toggleAgreement(this)">
+              <input type="checkbox" name="agree" value="accuracy"/>
+              <span class="agreement-text">I confirm that the information I have provided in this application is accurate and complete. I understand that misrepresentation is grounds for removal.</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Final affirmation -->
+        <div class="affirmation-box">
+          <p>"I am prepared to approach this process with seriousness and respect."</p>
+          <label class="agreement-item" onclick="toggleAgreement(this)" style="text-align:left">
+            <input type="checkbox" id="final-affirmation"/>
+            <span class="agreement-text">I affirm the statement above.</span>
+          </label>
+        </div>
+
+        <div class="nav-actions">
+          <button class="btn-back" onclick="goToSection(4)">← Back</button>
+          <button class="btn-submit" id="submit-btn" onclick="submitApplication()">Apply for Cohort Review</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════ CONFIRMATION ══════════════════ -->
+    <div id="screen-confirm" class="screen">
+      <div class="confirm-inner">
+        <svg class="confirm-mark" width="56" height="40" viewBox="0 0 56 40" fill="none" aria-hidden="true">
+          <line x1="0"  y1="0" x2="28" y2="34" stroke="#0f1623" stroke-width="1.2"/>
+          <line x1="56" y1="0" x2="28" y2="34" stroke="#0f1623" stroke-width="1.2"/>
+          <circle cx="28" cy="34" r="3" fill="#b09e87"/>
+        </svg>
+
+        <h2 class="confirm-title">Your application<br/>has been received.</h2>
+        <p class="confirm-sub">Thank you for the thought you placed into this.</p>
+
+        <div class="confirm-details">
+          <div class="confirm-detail">
+            <p class="confirm-detail-label">Review Period</p>
+            <p class="confirm-detail-val">2–3 weeks from submission</p>
+          </div>
+          <div class="confirm-detail">
+            <p class="confirm-detail-label">Cohort Decision</p>
+            <p class="confirm-detail-val">2025 Season — notifications by email</p>
+          </div>
+          <div class="confirm-detail">
+            <p class="confirm-detail-label">Annual Membership</p>
+            <p class="confirm-detail-val">$650 / year</p>
+          </div>
+          <div class="confirm-detail">
+            <p class="confirm-detail-label">Payment Timing</p>
+            <p class="confirm-detail-val">Charged only upon acceptance</p>
+          </div>
+        </div>
+
+        <p class="confirm-note">
+          You will receive a confirmation at the email address provided. Admission decisions are communicated via email only. If admitted, you will receive onboarding instructions and a payment link. No charge is collected at this stage.
+        </p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="footer-logo">CONVERGE</div>
+    <ul class="footer-links">
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <p class="footer-copy">© 2025 Converge. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
