@@ -1,118 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
-<title>Join the Waitlist | Converge</title>
-
-<link rel="stylesheet" href="css/styles.css">
-
-<style>
-
-body{
-background:#f7f4ef;
-font-family:'Cormorant Garamond', serif;
-text-align:left;
-padding:90px 20px;
-}
-
-.container{
-max-width:680px;
-margin-left:60px;
-}
-
-h1{
-font-size:64px;
-line-height:0.95;
-font-weight:300;
-max-width:520px;
-margin:0 0 28px 0;
-}
-
-p{
-font-size:15px;
-line-height:1.9;
-max-width:520px;
-margin:0 0 32px 0;
-color:#5f6470;
-}
-
-input{
-width:100%;
-padding:14px;
-margin-bottom:16px;
-border:1px solid #ddd;
-font-size:16px;
-}
-
-button{
-background:#111;
-color:white;
-padding:14px 30px;
-border:none;
-font-size:16px;
-cursor:pointer;
-}
-
-button:hover{
-background:#333;
-}
-
-</style>
-
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join the Waitlist | Converge</title>
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+ 
+  <link rel="stylesheet" href="css/styles.css"/>
 </head>
-
 <body>
-
-    <svg class="convergence-motif" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <line x1="0"   y1="0"   x2="300" y2="300" stroke="#0f1623" stroke-width="1.2"/>
-  <line x1="600" y1="0"   x2="300" y2="300" stroke="#0f1623" stroke-width="1.2"/>
-  <line x1="0"   y1="80"  x2="300" y2="300" stroke="#0f1623" stroke-width="0.7"/>
-  <line x1="600" y1="80"  x2="300" y2="300" stroke="#0f1623" stroke-width="0.7"/>
-  <line x1="0"   y1="160" x2="300" y2="300" stroke="#0f1623" stroke-width="0.4"/>
-  <line x1="600" y1="160" x2="300" y2="300" stroke="#0f1623" stroke-width="0.4"/>
-  <line x1="0"   y1="240" x2="300" y2="300" stroke="#0f1623" stroke-width="0.2"/>
-  <line x1="600" y1="240" x2="300" y2="300" stroke="#0f1623" stroke-width="0.2"/>
-  <circle cx="300" cy="300" r="4"  fill="#b09e87" opacity="0.5"/>
-  <circle cx="300" cy="300" r="12" stroke="#b09e87" stroke-width="0.6" opacity="0.25"/>
-  <circle cx="300" cy="300" r="28" stroke="#b09e87" stroke-width="0.4" opacity="0.12"/>
-</svg>
-
-<div class="container hero-inner" style="padding-top: 80px;">
-
-<p class="hero-eyebrow fade-up">CONVERGE</p>
-
-<h1 style="font-size:56px; line-height:1.02; font-weight:300; max-width:520px;">
-  Join the waitlist.  
-</h1>
-
-<p style="font-size:19px; line-height:1.8; max-width:430px; color:#5f6470;">
-  Converge is building a new framework for intentional partnership. A limited number of applicants will be accepted to the inaugural cohort. 
-  <br><br>
-  Share your name and email below.
-  <br><br>
-  We'll be in touch as applications opens!
-</p>
-
-<div style="max-width: 520px; margin-top: 4rem;">
-
-<form name="waitlist" method="POST" data-netlify="true" action="/thank-you.html">
-
-<input type="hidden" name="form-name" value="waitlist">
-
-<input type="text" name="name" placeholder="Your name" required>
-
-<input type="email" name="email" placeholder="Your email address" required>
-
-<button type="submit">Join the Waitlist </button>
-
-</form>
-</div>
-
-</div>
-
+ 
+  <svg class="convergence-motif" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <line x1="0"   y1="0"   x2="300" y2="300" stroke="#0f1623" stroke-width="1.2"/>
+    <line x1="600" y1="0"   x2="300" y2="300" stroke="#0f1623" stroke-width="1.2"/>
+    <line x1="0"   y1="80"  x2="300" y2="300" stroke="#0f1623" stroke-width="0.7"/>
+    <line x1="600" y1="80"  x2="300" y2="300" stroke="#0f1623" stroke-width="0.7"/>
+    <line x1="0"   y1="160" x2="300" y2="300" stroke="#0f1623" stroke-width="0.4"/>
+    <line x1="600" y1="160" x2="300" y2="300" stroke="#0f1623" stroke-width="0.4"/>
+    <line x1="0"   y1="240" x2="300" y2="300" stroke="#0f1623" stroke-width="0.2"/>
+    <line x1="600" y1="240" x2="300" y2="300" stroke="#0f1623" stroke-width="0.2"/>
+    <circle cx="300" cy="300" r="4"  fill="#b09e87" opacity="0.5"/>
+    <circle cx="300" cy="300" r="12" stroke="#b09e87" stroke-width="0.6" opacity="0.25"/>
+    <circle cx="300" cy="300" r="28" stroke="#b09e87" stroke-width="0.4" opacity="0.12"/>
+  </svg>
+ 
+  <main class="container" style="padding-top: 140px; max-width: 700px;">
+ 
+    <p class="hero-eyebrow fade-up">Founding Cohort 2026</p>
+ 
+    <h1 class="hero-headline fade-up">
+      Join the<br/>
+      <em>waitlist.</em>
+    </h1>
+ 
+    <p class="hero-sub fade-up serif" style="margin-top: 2rem;">
+      Converge is building a new framework for intentional partnership. A limited number of applicants will be accepted to the inaugural cohort. Share your details below and we'll be in touch when applications open.
+    </p>
+ 
+    <div style="margin-top: 3rem; max-width: 480px;">
+ 
+      <form name="waitlist" method="POST" data-netlify="true" action="/thank-you.html">
+ 
+        <input type="hidden" name="form-name" value="waitlist"/>
+ 
+        <input
+          type="text"
+          name="first_name"
+          placeholder="First name"
+          required
+          style="display:block; width:100%; padding:14px 16px; margin-bottom:12px; border:1px solid #d4c4b0; background:white; font-family:'Jost',sans-serif; font-size:15px; font-weight:300; color:#0f1623; outline:none;"
+        />
+ 
+        <input
+          type="text"
+          name="last_name"
+          placeholder="Last name"
+          required
+          style="display:block; width:100%; padding:14px 16px; margin-bottom:12px; border:1px solid #d4c4b0; background:white; font-family:'Jost',sans-serif; font-size:15px; font-weight:300; color:#0f1623; outline:none;"
+        />
+ 
+        <input
+          type="email"
+          name="email"
+          placeholder="Email address"
+          required
+          style="display:block; width:100%; padding:14px 16px; margin-bottom:24px; border:1px solid #d4c4b0; background:white; font-family:'Jost',sans-serif; font-size:15px; font-weight:300; color:#0f1623; outline:none;"
+        />
+ 
+        <button
+          type="submit"
+          class="btn-primary"
+          style="width:100%; text-align:center; padding:18px 32px; font-size:12px; letter-spacing:0.22em;"
+        >
+          Join the Waitlist
+        </button>
+ 
+      </form>
+ 
+      <p style="margin-top:16px; font-family:'Jost',sans-serif; font-size:12px; font-weight:300; color:#7a8090; letter-spacing:0.04em;">
+        No commitment. No payment. We'll reach out directly.
+      </p>
+ 
+    </div>
+ 
+  </main>
+ 
 </body>
 </html>
