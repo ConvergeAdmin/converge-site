@@ -404,3 +404,48 @@ document.addEventListener('DOMContentLoaded', () => {
   initLanding();
   initApp();
 });
+/* ============================================================
+   NAV HAMBURGER MENU
+   Add this to the bottom of js/script.js
+   ============================================================ */
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  const hamburger = document.getElementById('nav-hamburger');
+  const mobileMenu = document.getElementById('nav-mobile-menu');
+
+  if (hamburger && mobileMenu) {
+
+    // Toggle menu open/closed
+    hamburger.addEventListener('click', function () {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+
+    // Close menu when a link is clicked
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function (e) {
+      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      }
+    });
+
+  }
+
+  // Highlight active nav link based on current page
+  const currentPage = window.location.pathname.split('/').pop();
+  document.querySelectorAll('.nav-links a').forEach(function (link) {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+    }
+  });
+
+});
