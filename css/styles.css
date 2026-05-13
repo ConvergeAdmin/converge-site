@@ -959,9 +959,10 @@ select:focus { border-color: var(--navy); }
 /* ── BODY SECTIONS ── */
 .philosophy-section {
   padding: 100px 0;
-  border-top: 1px solid var(--rule);
 }
- 
+ .philosophy-section--first {
+  border-top: none;
+}
 .philosophy-container {
   max-width: 680px;
   margin: 0 auto;
@@ -1062,6 +1063,3 @@ select:focus { border-color: var(--navy); }
   }
 }
 
-.philosophy-section:first-of-type {
-  border-top: none;
-}
