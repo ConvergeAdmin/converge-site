@@ -1093,7 +1093,11 @@ select:focus { border-color: var(--navy); }
 .nav-links a:hover { color: var(--navy); }
 
 /* Active state — highlights current page link */
-.nav-links a.active { color: var(--navy); border-bottom: 1px solid var(--warm); padding-bottom: 2px; }
+.nav-links a.active {
+  color: var(--navy);
+  border: 1px solid var(--warm);
+  padding: 6px 12px;
+}
 
 /* ── NAV RIGHT ── */
 .nav-right {
