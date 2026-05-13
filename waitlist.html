@@ -12,7 +12,40 @@
   <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
- 
+ <!-- ── NAV ── -->
+<!-- Replace the existing <nav> block on every page with this -->
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">C O N V E R G E</a>
+
+  <!-- Desktop nav links -->
+  <ul class="nav-links">
+    <li><a href="philosophy.html">Our Philosophy</a></li>
+    <li><a href="framework.html">Our Framework</a></li>
+    <li><a href="beyond-geography.html">Beyond Geography</a></li>
+    <li><a href="trust-and-safety.html">Trust & Safety</a></li>
+  </ul>
+
+  <!-- Right side: CTA + hamburger -->
+  <div class="nav-right">
+    <a href="waitlist.html" class="nav-cta">Join the Waitlist</a>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="nav-mobile-menu" id="nav-mobile-menu">
+  <ul>
+    <li><a href="philosophy.html">Our Philosophy</a></li>
+    <li><a href="framework.html">Our Framework</a></li>
+    <li><a href="beyond-geography.html">Beyond Geography</a></li>
+    <li><a href="trust-and-safety.html">Trust & Safety</a></li>
+    <li><a href="waitlist.html">Join the Waitlist</a></li>
+  </ul>
+</div>
   <svg class="convergence-motif" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <line x1="0"   y1="0"   x2="300" y2="300" stroke="#0f1623" stroke-width="1.2"/>
     <line x1="600" y1="0"   x2="300" y2="300" stroke="#0f1623" stroke-width="1.2"/>
