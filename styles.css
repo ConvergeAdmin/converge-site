@@ -938,6 +938,11 @@ select:focus { border-color: var(--navy); }
   .standards-grid { grid-template-columns: 1fr; }
   .site-footer    { padding: 40px 24px; }
 }
+/* ============================================================
+   PHILOSOPHY PAGE
+   Add these rules to the bottom of css/styles.css
+   ============================================================ */
+ 
 /* ── HERO ── */
 #philosophy-hero {
   min-height: 80vh;
