@@ -1061,3 +1061,7 @@ select:focus { border-color: var(--navy); }
     padding-left: 24px;
   }
 }
+
+.philosophy-section:first-of-type {
+  border-top: none;
+}
