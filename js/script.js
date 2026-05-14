@@ -11,8 +11,7 @@
    ──────────────────────────────────────────────────────────── */
 function initLanding() {
   if (!document.getElementById('hero')) return;
-  // Nothing beyond CSS animations needed for landing page.
-  // Placeholder for future enhancements (smooth scroll, etc.)
+  // Placeholder for future enhancements
 }
 
 
@@ -56,7 +55,7 @@ const CONFLICT_SCENARIOS = [
   {
     q: 'Your partner says something that stings during an otherwise minor disagreement. Your instinct is to:',
     opts: [
-      'Name it immediately and address it directly.',
+      'Name it and address it directly.',
       'Say nothing in the moment and return to it later when calmer.',
       'Let it pass — context matters, and it was probably not intentional.',
       'Withdraw briefly, then re-engage when you have gathered your thoughts.'
@@ -106,6 +105,104 @@ let rankOrder      = [...VALUES_LIST];
 let draggingEl     = null;
 let draggingIdx    = null;
 
+// ── LOCAL STORAGE KEY ─────────────────────────────────────────
+const STORAGE_KEY = 'converge_application_draft';
+
+// ── SAVE DRAFT TO LOCAL STORAGE ───────────────────────────────
+function saveDraft() {
+  try {
+    const draft = collectAllAnswers();
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(draft));
+  } catch(e) {
+    // Fail silently — saving draft is best effort
+  }
+}
+
+// ── CLEAR DRAFT FROM LOCAL STORAGE ───────────────────────────
+function clearDraft() {
+  try {
+    localStorage.removeItem(STORAGE_KEY);
+  } catch(e) {}
+}
+
+// ── COLLECT ALL ANSWERS ───────────────────────────────────────
+function collectAllAnswers() {
+  const data = {};
+
+  // Section 1
+  const q1 = document.querySelector('input[name="q1"]:checked');
+  data['intent'] = q1 ? q1.value : '';
+
+  const q2 = document.querySelector('input[name="q2"]:checked');
+  data['timeline'] = q2 ? q2.value : '';
+
+  const q3 = document.querySelector('input[name="q3"]:checked');
+  data['open_to_relocation'] = q3 ? q3.value : '';
+
+  data['why_converge'] = document.getElementById('q4-text')?.value || '';
+
+  // Section 2
+  data['most_recent_relationship'] = document.getElementById('q5-text')?.value || '';
+  data['personal_accountability']  = document.getElementById('q6-text')?.value || '';
+  data['pattern_working_on']       = document.getElementById('q7-text')?.value || '';
+
+  const q8 = document.querySelector('input[name="q8"]:checked');
+  data['conflict_style'] = q8 ? q8.value : '';
+  data['conflict_style_other'] = document.getElementById('q8-other')?.value || '';
+
+  data['love_growing_up'] = document.getElementById('q9-text')?.value || '';
+
+  // Section 3
+  data['values_ranking'] = rankOrder.join(', ');
+  data['location']       = document.getElementById('q10-loc')?.value || '';
+
+  const q11 = document.querySelector('input[name="q11"]:checked');
+  data['wants_children'] = q11 ? q11.value : '';
+
+  const q11b = document.querySelector('input[name="q11b"]:checked');
+  data['has_children'] = q11b ? q11b.value : '';
+
+  const q11c = document.querySelector('input[name="q11c"]:checked');
+  data['open_to_partner_with_children'] = q11c ? q11c.value : '';
+
+  data['stable_life_definition'] = document.getElementById('q12-text')?.value || '';
+  data['non_negotiable_1']       = document.getElementById('nn1')?.value || '';
+  data['non_negotiable_2']       = document.getElementById('nn2')?.value || '';
+  data['non_negotiable_3']       = document.getElementById('nn3')?.value || '';
+  data['false_preference']       = document.getElementById('q13-text')?.value || '';
+
+  // Section 4 — Likert
+  LIKERT_STATEMENTS.forEach((stmt, i) => {
+    const r = document.querySelector(`input[name="likert-${i}"]:checked`);
+    data[`likert_${i + 1}`] = r ? r.value : '';
+  });
+
+  // Section 4 — Conflict scenarios
+  CONFLICT_SCENARIOS.forEach((_, si) => {
+    const r = document.querySelector(`input[name="cs-${si}"]:checked`);
+    data[`conflict_scenario_${si + 1}`] = r ? CONFLICT_SCENARIOS[si].opts[parseInt(r.value)] : '';
+  });
+
+  // Section 5
+  const q14 = document.querySelector('input[name="q14"]:checked');
+  data['work_style'] = q14 ? q14.value : '';
+
+  const q15 = document.querySelector('input[name="q15"]:checked');
+  data['schedule_flexibility'] = q15 ? q15.value : '';
+
+  const q17 = document.querySelector('input[name="q17"]:checked');
+  data['exclusivity_ready'] = q17 ? q17.value : '';
+
+  // Section 6
+  data['first_name'] = document.getElementById('fname')?.value || '';
+  data['last_name']  = document.getElementById('lname')?.value || '';
+  data['email']      = document.getElementById('email')?.value || '';
+
+  data['submission_date'] = new Date().toISOString();
+
+  return data;
+}
+
 // ── INIT APP ──────────────────────────────────────────────────
 function initApp() {
   if (!document.getElementById('screen-preamble')) return;
@@ -115,6 +212,15 @@ function initApp() {
   buildLikert();
   buildConflictQuestions();
   bindConditionalWatchers();
+  bindDraftSaving();
+}
+
+// ── BIND DRAFT SAVING ─────────────────────────────────────────
+// Auto-saves draft every time user moves between sections
+function bindDraftSaving() {
+  // Save on any input change
+  document.addEventListener('change', saveDraft);
+  document.addEventListener('input',  saveDraft);
 }
 
 // ── CONDITIONAL WATCHERS ──────────────────────────────────────
@@ -128,12 +234,19 @@ function bindConditionalWatchers() {
     });
   });
 
-  // Q8: other text area
+  // Q8: show other textarea when "other" selected — FIXED
   document.querySelectorAll('input[name="q8"]').forEach(r => {
     r.addEventListener('change', () => {
       const v = document.querySelector('input[name="q8"]:checked')?.value;
       const wrap = document.getElementById('q8-other-wrap');
-      if (wrap) wrap.style.display = (v === 'other') ? 'block' : 'none';
+      if (wrap) {
+        wrap.style.display = (v === 'other') ? 'block' : 'none';
+        // Focus the textarea when it appears
+        if (v === 'other') {
+          const ta = document.getElementById('q8-other');
+          if (ta) setTimeout(() => ta.focus(), 50);
+        }
+      }
     });
   });
 
@@ -175,7 +288,7 @@ function updateProgress(sectionIdx) {
     const el = document.getElementById(`pstep-${i}`);
     if (!el) return;
     el.classList.remove('active', 'complete');
-    if (i < sectionIdx)      el.classList.add('complete');
+    if (i < sectionIdx)        el.classList.add('complete');
     else if (i === sectionIdx) el.classList.add('active');
   });
 
@@ -200,6 +313,7 @@ function goToPreamble() {
 }
 
 function goToSection(idx) {
+  saveDraft(); // Save before moving
   hideAll();
   const screen = document.getElementById(`screen-${idx}`);
   if (screen) {
@@ -210,7 +324,9 @@ function goToSection(idx) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+// ── SUBMIT APPLICATION ────────────────────────────────────────
 function submitApplication() {
+
   // Validate all agreements checked
   const checkboxes  = document.querySelectorAll('.agreement-list input[type="checkbox"]');
   const affirmation = document.getElementById('final-affirmation');
@@ -224,6 +340,64 @@ function submitApplication() {
     return;
   }
 
+  // Validate email and name
+  const fname = document.getElementById('fname')?.value.trim();
+  const lname = document.getElementById('lname')?.value.trim();
+  const email = document.getElementById('email')?.value.trim();
+
+  if (!fname || !lname || !email) {
+    alert('Please provide your first name, last name, and email address before submitting.');
+    return;
+  }
+
+  // Collect all answers
+  const data = collectAllAnswers();
+
+  // Show loading state on button
+  const submitBtn = document.getElementById('submit-btn');
+  if (submitBtn) {
+    submitBtn.textContent = 'Submitting...';
+    submitBtn.disabled = true;
+  }
+
+  // Build form data for Netlify
+  const formData = new FormData();
+  formData.append('form-name', 'converge-application');
+  Object.entries(data).forEach(([key, value]) => {
+    formData.append(key, value);
+  });
+
+  // Submit to Netlify
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Accept': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(formData).toString()
+  })
+  .then(response => {
+    if (response.ok) {
+      // Success — clear draft, show confirmation
+      clearDraft();
+      showConfirmation();
+    } else {
+      throw new Error('Submission failed');
+    }
+  })
+  .catch(() => {
+    // Network error — draft is already saved locally
+    if (submitBtn) {
+      submitBtn.textContent = 'Apply for Cohort Review';
+      submitBtn.disabled = false;
+    }
+    alert(
+      'We were unable to submit your application due to a connection issue. ' +
+      'Your answers have been saved in your browser. ' +
+      'Please check your connection and try again — you will not lose your progress.'
+    );
+  });
+}
+
+// ── SHOW CONFIRMATION ─────────────────────────────────────────
+function showConfirmation() {
   hideAll();
   const confirm = document.getElementById('screen-confirm');
   if (confirm) confirm.classList.add('active');
@@ -278,8 +452,8 @@ function countWords(textarea, counterId, min, max) {
   if (!el) return;
   el.textContent = `${words} word${words !== 1 ? 's' : ''}`;
   el.classList.remove('warn', 'over');
-  if (max > 0 && words > max)           el.classList.add('over');
-  else if (min > 0 && words < min && words > 0) el.classList.add('warn');
+  if (max > 0 && words > max)                    el.classList.add('over');
+  else if (min > 0 && words < min && words > 0)  el.classList.add('warn');
 }
 
 // ── RANK LIST (drag & drop) ───────────────────────────────────
@@ -404,25 +578,22 @@ document.addEventListener('DOMContentLoaded', () => {
   initLanding();
   initApp();
 });
+
 /* ============================================================
    NAV HAMBURGER MENU
-   Add this to the bottom of js/script.js
    ============================================================ */
-
 document.addEventListener('DOMContentLoaded', function () {
 
-  const hamburger = document.getElementById('nav-hamburger');
+  const hamburger  = document.getElementById('nav-hamburger');
   const mobileMenu = document.getElementById('nav-mobile-menu');
 
   if (hamburger && mobileMenu) {
 
-    // Toggle menu open/closed
     hamburger.addEventListener('click', function () {
       hamburger.classList.toggle('open');
       mobileMenu.classList.toggle('open');
     });
 
-    // Close menu when a link is clicked
     mobileMenu.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         hamburger.classList.remove('open');
@@ -430,17 +601,15 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
 
-    // Close menu when clicking outside
     document.addEventListener('click', function (e) {
       if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
         hamburger.classList.remove('open');
         mobileMenu.classList.remove('open');
       }
     });
-
   }
 
-  // Highlight active nav link based on current page
+  // Highlight active nav link
   const currentPage = window.location.pathname.split('/').pop();
   document.querySelectorAll('.nav-links a').forEach(function (link) {
     if (link.getAttribute('href') === currentPage) {
