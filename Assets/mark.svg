@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Converge Email Signature</title>
+  <style>
+    body {
+      background: #f0ece4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .preview-label {
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 24px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .preview-wrap {
+      background: white;
+      padding: 48px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+<div style="padding: 40px;">
+
+  <p class="preview-label">Signature Preview</p>
+
+  <div class="preview-wrap">
+
+    <!-- ── THIS IS THE SIGNATURE — copy everything between these comments into Gmail ── -->
+
+    <table cellpadding="0" cellspacing="0" border="0" style="font-family: Georgia, 'Times New Roman', serif; color: #0f1623;">
+      <tr>
+        <td style="padding-right: 24px; vertical-align: middle; border-right: 1px solid #d4c4b0;">
+
+          <!-- Convergence mark as inline SVG -->
+          <svg width="44" height="52" viewBox="0 0 44 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Outer lines -->
+            <line x1="0"  y1="0" x2="22" y2="46" stroke="#0f1623" stroke-width="1.4" stroke-linecap="round"/>
+            <line x1="44" y1="0" x2="22" y2="46" stroke="#0f1623" stroke-width="1.4" stroke-linecap="round"/>
+            <!-- Inner lines -->
+            <line x1="9"  y1="0" x2="22" y2="46" stroke="#0f1623" stroke-width="0.6" stroke-linecap="round"/>
+            <line x1="35" y1="0" x2="22" y2="46" stroke="#0f1623" stroke-width="0.6" stroke-linecap="round"/>
+            <!-- Convergence point -->
+            <circle cx="22" cy="46" r="3.2" fill="#b09e87"/>
+            <circle cx="22" cy="46" r="7.5" fill="none" stroke="#b09e87" stroke-width="0.6" opacity="0.4"/>
+          </svg>
+
+        </td>
+        <td style="padding-left: 24px; vertical-align: middle;">
+
+          <!-- Name -->
+          <div style="font-family: Georgia, 'Times New Roman', serif; font-size: 17px; font-weight: normal; color: #0f1623; letter-spacing: 0.02em; margin-bottom: 3px;">
+            Anuarite Chretien
+          </div>
+
+          <!-- Title -->
+          <div style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #b09e87; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px;">
+            Founder
+          </div>
+
+          <!-- Rule -->
+          <div style="width: 32px; height: 1px; background: #d4c4b0; margin-bottom: 10px;"></div>
+
+          <!-- Email -->
+          <div style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #7a8090; letter-spacing: 0.04em; margin-bottom: 4px;">
+            <a href="mailto:hello@convergecourtship.com" style="color: #7a8090; text-decoration: none;">hello@convergecourtship.com</a>
+          </div>
+
+          <!-- Website -->
+          <div style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #7a8090; letter-spacing: 0.04em;">
+            <a href="https://convergecourtship.com" style="color: #b09e87; text-decoration: none;">convergecourtship.com</a>
+          </div>
+
+        </td>
+      </tr>
+    </table>
+
+    <!-- ── END SIGNATURE ── -->
+
+  </div>
+</div>
+</body>
+</html>
