@@ -368,7 +368,7 @@ function submitApplication() {
   });
 
   // Submit to Netlify
-  fetch('https://convergecourtship.com/', {
+ fetch('https://convergecourtship.com/application-hidden.html', {
     method: 'POST',
     headers: { 'Accept': 'application/x-www-form-urlencoded' },
     body: new URLSearchParams(formData).toString()
