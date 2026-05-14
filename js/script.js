@@ -360,19 +360,17 @@ function submitApplication() {
     submitBtn.disabled = true;
   }
 
-  // Build form data for Netlify
-  const formData = new FormData();
-  formData.append('form-name', 'converge-application');
-  Object.entries(data).forEach(([key, value]) => {
-    formData.append(key, value);
-  });
+  const params = new URLSearchParams();
+params.append('form-name', 'converge-application');
+Object.entries(data).forEach(([key, value]) => {
+  params.append(key, value);
+});
 
-  // Submit to Netlify
-fetch('/', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams(formData).toString()
-  })
+fetch('https://convergecourtship.com/', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  body: params.toString()
+})
   .then(response => {
     if (response.ok) {
       // Success — clear draft, show confirmation
