@@ -257,7 +257,7 @@ h1, h2, h3, h4 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight:
   color: var(--text-sec);
 }
 .replaced-list li::before { content: "—  "; color: var(--warm-light); }
-.with-list li::before { content: "·  "; color: var(--warm); font-size: 20px; vertical-align: -2px; }
+.with-list li::before { content: "—  "; color: var(--warm-light); }
 
 /* ── FRAMEWORK (dark section) ── */
 #framework { background: var(--navy); }
