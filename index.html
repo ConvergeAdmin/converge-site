@@ -1,341 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Converge — A structured courtship system for adults ready to build a life together. Where serious people meet with intention."/>
-  <title>Converge — Where people meet with intention.</title>
+  <title>Converge — Where people meet with intention</title>
+  <meta name="description" content="Converge is a structured courtship platform for adults ready to build a life together. Curated introductions, voice-first calls, and a deliberate pace."/>
+  <meta property="og:title" content="Converge — Where people meet with intention"/>
+  <meta property="og:description" content="Converge is a structured courtship platform for adults ready to build a life together. Curated introductions, voice-first calls, and a deliberate pace."/>
+  <meta property="og:type" content="website"/>
+  <meta name="theme-color" content="#f7f4ef"/>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
 
-  <!-- ── NAV ── -->
-  <nav class="site-nav">
-    <a href="index.html" class="nav-logo">C O N V E R G E</a>
-
-    <!-- Desktop nav links -->
-    <ul class="nav-links">
-      <li><a href="philosophy.html">Our Philosophy</a></li>
-      <li><a href="framework.html">Our Framework</a></li>
+  <a class="sr-only" href="#main">Skip to content</a>
+  <header class="site-nav pad">
+    <a href="index.html" class="logo" aria-label="Converge home"><svg viewBox="0 0 44 56" fill="none" aria-hidden="true"><line x1="2" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><line x1="42" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><line x1="12" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><line x1="32" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><circle cx="22" cy="46" r="3.6" fill="#b09e87"/><circle cx="22" cy="46" r="8" stroke="#b09e87" stroke-width="1"/></svg><span>CONVERGE</span></a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+      <li><a href="philosophy.html">Philosophy</a></li>
+      <li><a href="framework.html">Framework</a></li>
       <li><a href="beyond-geography.html">Beyond Geography</a></li>
-      <li><a href="trust-and-safety.html">Trust & Safety</a></li>
-    </ul>
-
-    <!-- Right side: CTA + hamburger -->
+      <li><a href="trust-and-safety.html">Trust &amp; Safety</a></li>
+      <li><a href="editorials.html">Editorials</a></li>
+      </ul>
+    </nav>
     <div class="nav-right">
-      <a href="waitlist.html" class="nav-cta">Join the Waitlist</a>
-      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
-        <span></span>
-        <span></span>
-        <span></span>
+      <a href="waitlist.html" class="btn btn--dark nav-cta">Join the Waitlist</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
       </button>
     </div>
-  </nav>
-
-  <!-- Mobile menu -->
-  <div class="nav-mobile-menu" id="nav-mobile-menu">
+  </header>
+  <div class="mobile-menu" id="mobile-menu">
     <ul>
-      <li><a href="philosophy.html">Our Philosophy</a></li>
-      <li><a href="framework.html">Our Framework</a></li>
+      <li><a href="philosophy.html">Philosophy</a></li>
+      <li><a href="framework.html">Framework</a></li>
       <li><a href="beyond-geography.html">Beyond Geography</a></li>
-      <li><a href="trust-and-safety.html">Trust & Safety</a></li>
+      <li><a href="trust-and-safety.html">Trust &amp; Safety</a></li>
+      <li><a href="editorials.html">Editorials</a></li>
       <li><a href="waitlist.html">Join the Waitlist</a></li>
     </ul>
   </div>
 
-  <!-- ── HERO ── -->
-  <section id="hero">
-    <svg class="convergence-motif" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <line x1="0"   y1="0"   x2="300" y2="300" stroke="#0f1623" stroke-width="1.2"/>
-      <line x1="600" y1="0"   x2="300" y2="300" stroke="#0f1623" stroke-width="1.2"/>
-      <line x1="0"   y1="80"  x2="300" y2="300" stroke="#0f1623" stroke-width="0.7"/>
-      <line x1="600" y1="80"  x2="300" y2="300" stroke="#0f1623" stroke-width="0.7"/>
-      <line x1="0"   y1="160" x2="300" y2="300" stroke="#0f1623" stroke-width="0.4"/>
-      <line x1="600" y1="160" x2="300" y2="300" stroke="#0f1623" stroke-width="0.4"/>
-      <line x1="0"   y1="240" x2="300" y2="300" stroke="#0f1623" stroke-width="0.2"/>
-      <line x1="600" y1="240" x2="300" y2="300" stroke="#0f1623" stroke-width="0.2"/>
-      <circle cx="300" cy="300" r="4"  fill="#b09e87" opacity="0.5"/>
-      <circle cx="300" cy="300" r="12" stroke="#b09e87" stroke-width="0.6" opacity="0.25"/>
-      <circle cx="300" cy="300" r="28" stroke="#b09e87" stroke-width="0.4" opacity="0.12"/>
-    </svg>
+  <main id="main">
 
-    <div class="container hero-inner">
-      <p class="hero-eyebrow fade-up">Structured Courtship · Est. 2026</p>
-      <h1 class="hero-headline fade-up">
-        Where people<br/>
-        meet with<br/>
-        <em>intention.</em>
-      </h1>
-      <p class="hero-sub fade-up serif">Ready to build a life, not just a night?</p>
-      <div class="hero-actions fade-up">
-        <a href="waitlist.html" class="btn-primary">Join the Waitlist</a>
-        <span class="hero-note">Founding cohort — limited admissions</span>
+    <!-- HERO: two windows, one conversation -->
+    <section class="hero">
+      <div class="hero__panels">
+        <img src="images/hero-left.webp" width="1024" height="1536" fetchpriority="high"
+             alt="In one city, a woman at a rain-streaked window smiles as she listens on a phone call at dusk"/>
+        <img src="images/hero-right.webp" width="1024" height="1536" fetchpriority="high"
+             alt="In another city, a man at a window overlooking a skyline smiles as he listens on the same call"/>
       </div>
-    </div>
-  </section>
-
-  <!-- ── POSITIONING ── -->
-  <section class="landing-section" id="positioning">
-    <div class="container">
-      <span class="section-label">The Problem</span>
-      <h2 class="section-title">Modern dating platforms<br/>prioritize engagement<br/>over meaningful outcomes.</h2>
-      <p class="section-body">They were designed to keep you scrolling, not to help you build something real. Converge is a different system entirely — one built around the premise that the quality of your process determines the quality of your result.</p>
-
-      <div class="positioning-grid">
-        <div class="grid-cell">
-          <h3>What Converge replaces</h3>
-          <ul class="replaced-list">
-            <li>Swiping and volume-based matching</li>
-            <li>Juggling multiple simultaneous pursuits</li>
-            <li>Endless, ambiguous messaging</li>
-            <li>Ambiguity about intent</li>
-            <li>No structure, no accountability</li>
-          </ul>
-        </div>
-        <div class="grid-cell">
-          <h3>What Converge provides</h3>
-          <ul class="with-list">
-            <li>Curated, intentional introductions</li>
-            <li>Structured call progression</li>
-            <li>Maximum three active connections</li>
-            <li>Full Attention mode</li>
-            <li>Annual membership with cohort admission</li>
-          </ul>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__content pad">
+        <svg class="hero__mark fade-up" viewBox="0 0 30 30" fill="none" aria-hidden="true"><circle cx="15" cy="15" r="4" fill="#b09e87"/><circle cx="15" cy="15" r="11" stroke="#b09e87" stroke-width="1"/></svg>
+        <p class="eyebrow fade-up">Structured Courtship · Est. 2026</p>
+        <h1 class="fade-up d1">Where people meet<br/><em>with intention.</em></h1>
+        <p class="lede fade-up d2">Ready to build a life, not just a night?</p>
+        <div class="hero__cta fade-up d3">
+          <a href="waitlist.html" class="btn btn--light">Join the Waitlist</a>
+          <span class="hero__note">Founding cohort — limited admissions</span>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ── FRAMEWORK ── -->
-  <section class="landing-section" id="framework">
-    <div class="container">
-      <span class="section-label">The System</span>
-      <h2 class="section-title">The Converge<br/>Courtship Framework</h2>
-      <p class="section-body">Six deliberate stages. Each one designed to deepen clarity before deepening investment.</p>
+    <!-- I. THE PROBLEM -->
+    <section class="section pad">
+      <div class="wrap">
+        <p class="eyebrow">I. The Problem</p>
+        <h2 class="h2 h2--xl">Modern dating platforms prioritize engagement over <em>meaningful outcomes.</em></h2>
+        <p class="body" style="max-width: 620px">They were designed to keep you scrolling, not to help you build something real. Converge is a different system entirely — one built around the premise that the quality of your process determines the quality of your result.</p>
+        <div class="actions"><a class="textlink" href="philosophy.html">Read our philosophy</a></div>
 
-      <div class="stages">
-        <div class="stage">
-          <div class="stage-num">01</div>
+        <div class="compare">
           <div>
-            <span class="stage-tag">Introduction</span>
-            <h3 class="stage-title">Curated Introduction</h3>
-            <p class="stage-desc">Converge reviews compatibility across values, life direction, and context — not surface-level preference. Once compatibility is assessed, each cohort member receives up to three introductions.</p>
+            <p class="label">What Converge replaces</p>
+            <ul>
+              <li>Swiping and volume-based matching</li>
+              <li>Juggling multiple simultaneous pursuits</li>
+              <li>Endless, ambiguous messaging</li>
+              <li>No structure, no accountability</li>
+            </ul>
           </div>
-        </div>
-        <div class="stage">
-          <div class="stage-num">02</div>
           <div>
-            <span class="stage-tag">Audio · 30 minutes</span>
-            <h3 class="stage-title">The First Call</h3>
-            <p class="stage-desc">A thirty-minute audio-only call. Guided by structured prompts provided in advance. Video is not available at this stage — voice carries what a photograph cannot. The conversation is intentional, not improvisational.</p>
-          </div>
-        </div>
-        <div class="stage">
-          <div class="stage-num">03</div>
-          <div>
-            <span class="stage-tag">Audio · 60 minutes</span>
-            <h3 class="stage-title">The Second Call</h3>
-            <p class="stage-desc">A sixty-minute continuation, audio-only. By this point, there is enough shared context to go further. This call is unguided. Members are expected to carry the conversation themselves, which is a useful signal in its own right.</p>
-          </div>
-        </div>
-        <div class="stage">
-          <div class="stage-num">04</div>
-          <div>
-            <span class="stage-tag">Video · 60 minutes</span>
-            <h3 class="stage-title">Open Exploration</h3>
-            <p class="stage-desc">Both parties have chosen to continue. Video unlocks for the first time. Connections remain concurrent at this stage — no one is asked to close anything yet. This is an opportunity to see one another, deepen what the audio calls began, and move toward a decision with greater clarity. Calls are self-directed and capped at sixty minutes.</p>
-          </div>
-        </div>
-        <div class="stage">
-          <div class="stage-num">05</div>
-          <div>
-            <span class="stage-tag">One Connection</span>
-            <h3 class="stage-title">Full Attention</h3>
-            <p class="stage-desc">A mutual, active choice. Both people have decided to close all other connections and give this one their full attention. Format is entirely open — scheduled calls, video, or whatever feels natural. At this stage, members are encouraged to exchange contact information and move beyond the platform. This is the beginning of real-world courtship.</p>
-          </div>
-        </div>
-        <div class="stage">
-          <div class="stage-num">06</div>
-          <div>
-            <span class="stage-tag">Optional</span>
-            <h3 class="stage-title">Real-World Integration</h3>
-            <p class="stage-desc">Optional relationship modules, first-meeting guidance, and structured resources for couples navigating the transition from courtship to partnership. Converge does not prescribe outcomes — it equips members to reach them deliberately.</p>
+            <p class="label">What Converge provides</p>
+            <ul>
+              <li>Curated, intentional introductions</li>
+              <li>Structured call progression — voice first</li>
+              <li>A maximum of three active connections</li>
+              <li>Full Attention, when you are both ready</li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ── MEMBERSHIP ── -->
-  <section class="landing-section" id="membership">
-    <div class="container">
-      <span class="section-label">Membership</span>
-      <h2 class="section-title">Access requires<br/>application.</h2>
+    <!-- WHY CONVERGE EXISTS -->
+    <section class="band band--2-1 band--origin">
+      <img src="images/waterfront-walk.webp" width="1774" height="887" loading="lazy" style="object-position: 20% 70%"
+           alt="Two people walk side by side along a waterfront path at sunset, deep in conversation"/>
+      <div class="band__panel">
+        <p class="eyebrow">Why Converge Exists</p>
+        <p class="quote">“Modern platforms were built to reward engagement. We built Converge to reward intention.”</p>
+        <p class="small">Attention is abundant. Alignment is not. Structure does not impede genuine connection — it creates the conditions under which it is more likely to occur.</p>
+      </div>
+    </section>
 
-      <div class="membership-inner">
-        <div class="price-block">
-          <p class="founding">Founding Rate</p>
-          <div class="amount">$650</div>
-          <p class="per">per year &nbsp;·&nbsp; billed annually</p>
-          <ul class="price-details">
+    <!-- II. THE SYSTEM -->
+    <section class="section navy pad">
+      <div class="wrap">
+        <div class="split split--end">
+          <div>
+            <p class="eyebrow">II. The System</p>
+            <h2 class="h2" style="font-size: 58px; line-height: 1.08">Six deliberate stages.<br/><em>Clarity before investment.</em></h2>
+            <p class="body" style="max-width: 480px">Each stage is designed to deepen understanding before it deepens commitment. Voice comes first. Video is earned. Exclusivity is chosen, never assumed.</p>
+          </div>
+          <img class="media r-5-4" src="images/autumn-walk.webp" width="1402" height="1122" loading="lazy" style="object-position: center 40%"
+               alt="Two people walk side by side along an autumn street, deep in conversation"/>
+        </div>
+
+        <div class="stage-grid">
+          <div><p class="num">01</p><p class="tag">Introduction</p><h3 class="h3">Curated Introduction</h3><p class="small">Compatibility is reviewed across values, life direction and context. Each member receives up to three introductions.</p></div>
+          <div><p class="num">02</p><p class="tag">Audio · 30 minutes</p><h3 class="h3">The First Call</h3><p class="small">Voice only, guided by prompts shared in advance. Voice carries what a photograph cannot.</p></div>
+          <div><p class="num">03</p><p class="tag">Audio · 60 minutes</p><h3 class="h3">The Second Call</h3><p class="small">Unguided. Members carry the conversation themselves — a useful signal in its own right.</p></div>
+          <div><p class="num">04</p><p class="tag">Video · 60 minutes</p><h3 class="h3">Open Exploration</h3><p class="small">Both have chosen to continue. Video unlocks for the first time, and connections remain concurrent.</p></div>
+          <div><p class="num">05</p><p class="tag">One connection</p><h3 class="h3">Full Attention</h3><p class="small">A mutual choice to close every other connection, honestly, and give this one your full attention.</p></div>
+          <div><p class="num">06</p><p class="tag">Optional</p><h3 class="h3">Real-World Integration</h3><p class="small">First-meeting guidance and resources for the move from courtship to partnership.</p></div>
+        </div>
+        <div class="actions" style="margin-top: 56px"><a class="textlink" href="framework.html">Explore the framework</a></div>
+      </div>
+    </section>
+
+    <!-- III. MEMBERSHIP -->
+    <section class="section pad">
+      <div class="wrap split split--start">
+        <div>
+          <p class="eyebrow">III. Membership</p>
+          <h2 class="h2" style="margin-bottom: 40px">Access requires <em>application.</em></h2>
+          <p class="body">Membership pricing is not a barrier — it is a signal. A financial commitment, however modest, filters for those who are here with genuine purpose.</p>
+          <p class="body">There are no shortcuts within the platform. No premium tier, no paid visibility. Every member moves through the same framework, at the same pace, held to the same standard.</p>
+        </div>
+        <div class="price-card">
+          <p class="eyebrow">Founding Rate</p>
+          <p class="price"><strong>$650</strong><span>per year</span></p>
+          <ul class="price-list">
             <li>Application required</li>
             <li>Cohort-based admission</li>
-            <li>Charged only upon acceptance</li>
-            <li>Cancel anytime</li>
-            <li>No monthly plans available</li>
+            <li>Charged only on acceptance</li>
+            <li>No auto-renewal</li>
             <li>No free tier</li>
-            <li>No paid boosts or promoted profiles</li>
+            <li>No paid boosts</li>
           </ul>
         </div>
-        <div class="price-right">
-          <p>Membership pricing is not a barrier — it is a signal. A financial commitment, however modest, meaningfully filters for those who are here with genuine purpose.</p>
-          <p>There are no shortcuts within the platform. No premium tier that bypasses the process. No paid visibility. Every member moves through the same framework, at the same pace, with the same standards applied.</p>
-          <p>Cohorts are admitted on a seasonal basis. Applications remain open between admission windows and are reviewed on a rolling basis. Admission decisions are communicated via email.</p>
+      </div>
+    </section>
+
+    <!-- PHOTO BREAK -->
+    <div class="band band--2-1">
+      <img src="images/library-steps.webp" width="1774" height="887" loading="lazy" style="object-position: 20% 60%"
+           alt="A man and a woman talk as they walk down the steps of a library in late-afternoon light"/>
+    </div>
+
+    <!-- IV. STANDARDS -->
+    <section class="section tint pad">
+      <div class="wrap">
+        <div class="split split--end">
+          <div>
+            <p class="eyebrow">IV. Our Standards</p>
+            <h2 class="h2" style="margin-bottom: 0">This is a managed <em>environment.</em></h2>
+          </div>
+          <p class="body">Converge maintains the integrity of the process through clear, consistently enforced standards. Membership is funded by members — never by advertising, and never by selling your data.</p>
+        </div>
+        <div class="tile-grid">
+          <div><div class="tile-rule"></div><h3 class="h3">Identity Verification</h3><p>Every member is identity-verified prior to admission. Anonymity is not available within the platform.</p></div>
+          <div><div class="tile-rule"></div><h3 class="h3">Early-Stage Conduct</h3><p>Explicit sexual communication during the First and Second Call stages results in immediate, permanent removal.</p></div>
+          <div><div class="tile-rule"></div><h3 class="h3">Off-Platform Contact</h3><p>Requesting handles, numbers or outside contact during early call stages is prohibited and enforced.</p></div>
+          <div><div class="tile-rule"></div><h3 class="h3">Connection Limits</h3><p>A maximum of three active connections per cohort. The limit is enforced, not optional.</p></div>
+          <div><div class="tile-rule"></div><h3 class="h3">Full Attention</h3><p>Entering Full Attention requires closing all other connections first. A condition of the stage, not a preference.</p></div>
+          <div><div class="tile-rule"></div><h3 class="h3">Direct Endings</h3><p>Endings are communicated directly and respectfully. Ghosting is treated as a conduct violation.</p></div>
+        </div>
+        <div class="actions" style="margin-top: 56px"><a class="textlink" href="trust-and-safety.html">Trust &amp; Safety</a></div>
+      </div>
+    </section>
+
+    <!-- V. BEYOND GEOGRAPHY -->
+    <section class="section pad">
+      <div class="wrap split">
+        <img class="media r-1-1" src="images/airport-arrivals.webp" width="1670" height="941" loading="lazy" style="object-position: 36% center"
+             alt="A woman at an airport arrivals rail smiles up toward the opening doors, waiting for someone"/>
+        <div>
+          <p class="eyebrow">V. Beyond Geography</p>
+          <h2 class="h2">The right person may not live <em>ten minutes away.</em></h2>
+          <p class="body">The early stages of courtship proceed remotely by design, so compatibility can emerge before proximity decides what is worth exploring.</p>
+          <p class="small" style="margin-top: 22px; color: var(--text-muted)">Currently open to residents of the United States and Canada.</p>
+          <div class="actions"><a class="textlink" href="beyond-geography.html">Read more</a></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ── STANDARDS ── -->
-  <section class="landing-section" id="standards">
-    <div class="container">
-      <span class="section-label">Our Standards</span>
-      <h2 class="section-title">This is a managed<br/>environment.</h2>
-      <p class="section-body">Converge maintains the integrity of the process through clear, consistently enforced standards. Membership is a privilege, not a right.</p>
-
-      <div class="standards-grid">
-        <div class="standard-item">
-          <div class="icon"></div>
-          <h4>Identity Verification</h4>
-          <p>All members are identity-verified prior to admission. Anonymity is not available within the platform.</p>
-        </div>
-        <div class="standard-item">
-          <div class="icon"></div>
-          <h4>Early-Stage Conduct</h4>
-          <p>Explicit sexual communication during the First and Second Call stages results in immediate and permanent removal.</p>
-        </div>
-        <div class="standard-item">
-          <div class="icon"></div>
-          <h4>Off-Platform Contact</h4>
-          <p>Requesting social handles, phone numbers, or off-platform contact during early call stages is prohibited and enforceable.</p>
-        </div>
-        <div class="standard-item">
-          <div class="icon"></div>
-          <h4>Connection Limits</h4>
-          <p>Members may hold a maximum of three active connections per cohort. This limit is enforced, not optional.</p>
-        </div>
-        <div class="standard-item">
-          <div class="icon"></div>
-          <h4>Full Attention</h4>
-          <p>Entering Full Attention mode requires closing all other active connections before proceeding. This is a condition of the stage, not a preference.</p>
-        </div>
-        <div class="standard-item">
-          <div class="icon"></div>
-          <h4>Direct Endings</h4>
-          <p>Members are expected to communicate endings directly and respectfully. Ghosting is treated as a conduct violation.</p>
+    <!-- FROM THE EDITORIAL: hidden until the first essay is published.
+         To show it: delete this comment line and the "END FROM THE EDITORIAL" line below,
+         then replace the bracketed text and point both links at the essay file.
+    <section class="section section--flush-top pad">
+      <div class="wrap feature-rule">
+        <div class="split split--end">
+          <div>
+            <p class="eyebrow" style="margin-bottom: 32px">From the Editorial</p>
+            <h2 class="h2" style="margin-bottom: 24px">[Latest editorial title]</h2>
+            <p class="meta">The Converge Team · [Month Day, Year] · [X]-minute read</p>
+          </div>
+          <div>
+            <p class="lede" style="margin-bottom: 0">[A one- or two-sentence summary of the latest essay.]</p>
+            <div class="actions">
+              <a class="textlink" href="editorials/[essay-file].html">Read the essay</a>
+              <a class="link-quiet" href="editorials.html">All editorials →</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    END FROM THE EDITORIAL -->
 
-  <!-- ── ORIGIN ── -->
-  <section class="landing-section" id="origin">
-    <div class="container--narrow">
-      <span class="section-label">Why Converge Exists</span>
-      <h2 class="section-title">Attention is abundant.<br/>Alignment is not.</h2>
-
-      <blockquote class="pull-quote">
-        "Modern platforms were built to reward engagement. We built Converge to reward intention."
-      </blockquote>
-
-      <p class="section-body" style="max-width:none">The dominant logic of online dating is one of volume: more profiles, more swipes, more messages. The underlying assumption is that exposure leads to connection. For most people seeking a genuine partnership, this assumption has proven false.</p>
-      <br/>
-      <p class="section-body" style="max-width:none">Converge operates from a different premise. The path to a lasting partnership is not more access — it is a better process. Structure does not impede genuine connection; it creates the conditions under which genuine connection is more likely to occur.</p>
-      <br/>
-      <p class="section-body" style="max-width:none">This platform was not built to scale for everyone. It was built for those who have already decided what they want, and who are prepared to pursue it with the seriousness it deserves.</p>
-    </div>
-  </section>
-
-  <!-- ── FAQ ── -->
-  <section class="landing-section" id="faq">
-    <div class="container">
-      <span class="section-label">Common Questions</span>
-      <h2 class="section-title">Asked and answered.</h2>
-
-      <div class="faq-list">
-        <div class="faq-item">
-          <p class="faq-q">Is this a dating app?</p>
-          <p class="faq-a">No. Converge is a structured courtship system. There is no app to download, no algorithm to game, no feed to scroll. Introductions are curated, not generated by automated matching. The distinction matters.</p>
+    <!-- FAQ -->
+    <section class="section navy pad">
+      <div class="wrap split split--start">
+        <div>
+          <p class="eyebrow">Common Questions</p>
+          <h2 class="h2">Asked and <em>answered.</em></h2>
         </div>
-        <div class="faq-item">
-          <p class="faq-q">Why limit connections to three?</p>
-          <p class="faq-a">Because divided attention produces diluted investment. Three is not an arbitrary number — it is enough to allow genuine evaluation without encouraging the shallow parallelism that characterizes most dating platforms. The limit enforces seriousness, not scarcity.</p>
+        <div class="faq">
+          <details open><summary>Is this a dating app?</summary><p>No. Converge is a structured courtship system. There is no feed to scroll and no algorithm to game. Introductions are curated, not generated.</p></details>
+          <details><summary>Why limit connections to three?</summary><p>Because divided attention produces diluted investment. Three is enough for genuine evaluation without the shallow parallelism of most platforms.</p></details>
+          <details><summary>Why audio-only for the first two calls?</summary><p>Visual presentation triggers quick judgements that short-circuit genuine assessment. By the time video arrives, a real foundation is already there.</p></details>
+          <details><summary>Why annual membership?</summary><p>Monthly billing rewards platforms for keeping you subscribed. An annual commitment aligns our incentives with yours: we succeed when you find what you came for.</p></details>
+          <details><summary>Is Converge inclusive?</summary><p>Converge is open to all adults, regardless of gender, orientation, ethnicity, religion or background, who are seeking a serious long-term partnership. The one non-negotiable is intent.</p></details>
+          <details><summary>Where is Converge available?</summary><p>Converge is currently open to residents of the United States and Canada. International expansion is planned; anyone may join the waitlist and will be notified when Converge reaches their area.</p></details>
+          <details><summary>Is relocation required?</summary><p>No. Geography is considered during introductions, but early courtship proceeds remotely. Whether relocation matters is a conversation for the two people involved.</p></details>
         </div>
-        <div class="faq-item">
-          <p class="faq-q">Why audio-only for the first two calls?</p>
-          <p class="faq-a">Visual presentation triggers immediate, often unconscious judgements that short-circuit genuine assessment. Audio-only calls require both parties to be present to the conversation itself. By the time video is available, members have already established a substantive foundation.</p>
-        </div>
-        <div class="faq-item">
-          <p class="faq-q">Why annual membership instead of monthly?</p>
-          <p class="faq-a">Monthly billing incentivizes platforms to manufacture urgency and extend engagement. An annual commitment aligns the platform's incentives with yours: we succeed when you find what you came for, not by keeping you subscribed indefinitely.</p>
-        </div>
-        <div class="faq-item">
-          <p class="faq-q">Is Converge inclusive?</p>
-          <p class="faq-a">Converge is open to all adults, regardless of gender, orientation, ethnicity, religion, or background, who are seeking a serious long-term partnership or marriage. The one non-negotiable is intent.</p>
-        </div>
-        <div class="faq-item">
-          <p class="faq-q">What if I do not wish to continue with someone?</p>
-          <p class="faq-a">You communicate that directly through the platform. Converge provides a clear, structured closing process. Ghosting is not acceptable conduct. Members are expected to treat one another with the same respect they would want extended to themselves.</p>
-        </div>
-        <div class="faq-item">
-          <p class="faq-q">Why so structured?</p>
-          <p class="faq-a">Because structure, applied well, is not constraint — it is clarity. The framework exists to reduce the anxiety of open-ended ambiguity and to create shared expectations between people who are, after all, strangers attempting something significant together.</p>
-        </div>
-        <div class="faq-item">
-  <p class="faq-q">Where is Converge currently available?</p>
-  <p class="faq-a">Converge is currently open to residents of the United States and Canada. International expansion is planned. If you are located outside of these regions, you are welcome to join the waitlist and will be notified when Converge becomes available in your area.</p>
-</div>
-
-<div class="faq-item">
-  <p class="faq-q">Is relocation required to participate?</p>
-  <p class="faq-a">No. Geographic compatibility is a factor considered during the introduction process, but the early stages of courtship proceed remotely by design. Where and whether relocation is relevant is a conversation that belongs to the people involved, not the platform.</p>
-</div>
       </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="cta-photo">
+      <img src="images/bookstore-evening.webp" width="1774" height="887" loading="lazy" alt=""/>
+      <div class="cta-photo__content pad">
+        <p class="eyebrow">Founding Cohort 2026</p>
+        <h2>Begin <em>deliberately.</em></h2>
+        <p class="lede">Applications for the Founding Cohort open soon. Join the waitlist and we will reach out directly.</p>
+        <a href="waitlist.html" class="btn btn--light">Join the Waitlist</a>
+        <p class="hero__note">No commitment. No payment collected at this stage.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer pad">
+    <div class="wrap">
+      <div class="footer-top">
+        <a href="index.html" class="logo" aria-label="Converge home"><svg viewBox="0 0 44 56" fill="none" aria-hidden="true"><line x1="2" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><line x1="42" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><line x1="12" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><line x1="32" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><circle cx="22" cy="46" r="3.6" fill="#b09e87"/><circle cx="22" cy="46" r="8" stroke="#b09e87" stroke-width="1"/></svg><span>CONVERGE</span></a>
+        <ul class="footer-nav">
+        <li><a href="philosophy.html">Philosophy</a></li>
+        <li><a href="framework.html">Framework</a></li>
+        <li><a href="beyond-geography.html">Beyond Geography</a></li>
+        <li><a href="trust-and-safety.html">Trust &amp; Safety</a></li>
+        <li><a href="editorials.html">Editorials</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Converge Courtship LLC. All rights reserved.</span>
+        <span class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="mailto:hello@convergecourtship.com">hello@convergecourtship.com</a>
+        </span>
+      </div>
+      <p class="footer-note">Imagery is illustrative and does not depict Converge members.</p>
     </div>
-  </section>
-
-  <!-- ── CTA ── -->
-  <section id="apply" style="text-align:center;padding:160px 0">
-    <div class="container">
-      <svg width="80" height="60" viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto 56px;opacity:0.35" aria-hidden="true">
-        <line x1="0"  y1="0" x2="40" y2="54" stroke="#0f1623" stroke-width="1.2"/>
-        <line x1="80" y1="0" x2="40" y2="54" stroke="#0f1623" stroke-width="1.2"/>
-        <line x1="12" y1="0" x2="40" y2="54" stroke="#0f1623" stroke-width="0.5"/>
-        <line x1="68" y1="0" x2="40" y2="54" stroke="#0f1623" stroke-width="0.5"/>
-        <circle cx="40" cy="54" r="3" fill="#b09e87" opacity="0.6"/>
-      </svg>
-
-      <span class="section-label" style="display:flex;justify-content:center">Founding Cohort</span>
-      <h2 class="section-title" style="max-width:560px;margin:0 auto 20px">Apply for the<br/>Founding Cohort</h2>
-      <p class="cta-sub">Applications for the 2026 Fall Season Cohort are coming soon. Admission decisions are communicated by email. You are charged only upon acceptance.</p>
-      <a href="#" onclick="return false;" class="btn-primary" style="font-size:13px;padding:20px 52px;opacity:0.5;cursor:default;">Coming Soon</a>
-      <p class="cta-note" style="margin-top:20px">Applications are reviewed on a rolling basis. &nbsp;·&nbsp; No payment is collected at the application stage.</p>
-    </div>
-  </section>
-
-  <!-- ── FOOTER ── -->
-  <footer class="site-footer">
-    <div class="footer-logo">CONVERGE</div>
-    <ul class="footer-links">
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Terms of Use</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-    <p class="footer-copy">© 2026 Converge. All rights reserved.</p>
   </footer>
 
   <script src="js/script.js"></script>

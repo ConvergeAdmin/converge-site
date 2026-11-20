@@ -3,149 +3,147 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Our Philosophy — Converge. A structured courtship platform built around presence, intention, and the belief that the conditions surrounding a relationship matter."/>
   <title>Our Philosophy | Converge</title>
+  <meta name="description" content="The structure surrounding a relationship matters. Why Converge is built around presence, intention and a calmer way to meet."/>
+  <meta property="og:title" content="Our Philosophy | Converge"/>
+  <meta property="og:description" content="The structure surrounding a relationship matters. Why Converge is built around presence, intention and a calmer way to meet."/>
+  <meta property="og:type" content="website"/>
+  <meta name="theme-color" content="#f7f4ef"/>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
 
-  <!-- ── NAV ── -->
-  <nav class="site-nav">
-    <a href="index.html" class="nav-logo">C O N V E R G E</a>
-
-    <!-- Desktop nav links -->
-    <ul class="nav-links">
-      <li><a href="philosophy.html">Our Philosophy</a></li>
-      <li><a href="framework.html">Our Framework</a></li>
+  <a class="sr-only" href="#main">Skip to content</a>
+  <header class="site-nav pad">
+    <a href="index.html" class="logo" aria-label="Converge home"><svg viewBox="0 0 44 56" fill="none" aria-hidden="true"><line x1="2" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><line x1="42" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><line x1="12" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><line x1="32" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><circle cx="22" cy="46" r="3.6" fill="#b09e87"/><circle cx="22" cy="46" r="8" stroke="#b09e87" stroke-width="1"/></svg><span>CONVERGE</span></a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+      <li><a href="philosophy.html" aria-current="page">Philosophy</a></li>
+      <li><a href="framework.html">Framework</a></li>
       <li><a href="beyond-geography.html">Beyond Geography</a></li>
-      <li><a href="trust-and-safety.html">Trust & Safety</a></li>
-    </ul>
-
-    <!-- Right side: CTA + hamburger -->
+      <li><a href="trust-and-safety.html">Trust &amp; Safety</a></li>
+      <li><a href="editorials.html">Editorials</a></li>
+      </ul>
+    </nav>
     <div class="nav-right">
-      <a href="waitlist.html" class="nav-cta">Join the Waitlist</a>
-      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
-        <span></span>
-        <span></span>
-        <span></span>
+      <a href="waitlist.html" class="btn btn--dark nav-cta">Join the Waitlist</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
       </button>
     </div>
-  </nav>
-
-  <!-- Mobile menu -->
-  <div class="nav-mobile-menu" id="nav-mobile-menu">
+  </header>
+  <div class="mobile-menu" id="mobile-menu">
     <ul>
-      <li><a href="philosophy.html">Our Philosophy</a></li>
-      <li><a href="framework.html">Our Framework</a></li>
+      <li><a href="philosophy.html" aria-current="page">Philosophy</a></li>
+      <li><a href="framework.html">Framework</a></li>
       <li><a href="beyond-geography.html">Beyond Geography</a></li>
-      <li><a href="trust-and-safety.html">Trust & Safety</a></li>
+      <li><a href="trust-and-safety.html">Trust &amp; Safety</a></li>
+      <li><a href="editorials.html">Editorials</a></li>
       <li><a href="waitlist.html">Join the Waitlist</a></li>
     </ul>
   </div>
 
-  <!-- ── HERO ── -->
-  <section id="philosophy-hero">
+  <main id="main">
 
-    <svg class="convergence-motif" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <line x1="0"   y1="0"   x2="300" y2="300" stroke="#0f1623" stroke-width="1.2"/>
-      <line x1="600" y1="0"   x2="300" y2="300" stroke="#0f1623" stroke-width="1.2"/>
-      <line x1="0"   y1="80"  x2="300" y2="300" stroke="#0f1623" stroke-width="0.7"/>
-      <line x1="600" y1="80"  x2="300" y2="300" stroke="#0f1623" stroke-width="0.7"/>
-      <line x1="0"   y1="160" x2="300" y2="300" stroke="#0f1623" stroke-width="0.4"/>
-      <line x1="600" y1="160" x2="300" y2="300" stroke="#0f1623" stroke-width="0.4"/>
-      <line x1="0"   y1="240" x2="300" y2="300" stroke="#0f1623" stroke-width="0.2"/>
-      <line x1="600" y1="240" x2="300" y2="300" stroke="#0f1623" stroke-width="0.2"/>
-      <circle cx="300" cy="300" r="4"  fill="#b09e87" opacity="0.5"/>
-      <circle cx="300" cy="300" r="12" stroke="#b09e87" stroke-width="0.6" opacity="0.25"/>
-      <circle cx="300" cy="300" r="28" stroke="#b09e87" stroke-width="0.4" opacity="0.12"/>
-    </svg>
+    <section class="page-hero pad">
+      <div class="wrap">
+        <p class="eyebrow fade-up">Our Philosophy</p>
+        <h1 class="display fade-up d1">The structure surrounding a relationship <em>matters.</em></h1>
+        <div class="byline-row fade-up d2">
+          <span class="meta">An essay in three parts</span>
+          <span class="meta">The Converge Team</span>
+          <span class="meta">Six-minute read</span>
+        </div>
+      </div>
+    </section>
 
-    <div class="container hero-inner">
-      <p class="hero-eyebrow fade-up">Our Philosophy</p>
-      <h1 class="hero-headline fade-up">
-        The structure<br/>
-        surrounding a<br/>
-        relationship<br/>
-        <em>matters.</em>
-      </h1>
+    <div class="band band--3-1">
+      <img src="images/lakeside-bench.webp" width="2172" height="724" style="object-position: center 60%"
+           alt="Two people at either end of a bench, turned toward each other, looking out over a misty autumn lake"/>
     </div>
 
-  </section>
+    <section class="pad" style="padding-top: 140px; padding-bottom: 40px">
+      <div class="narrow essay">
+        <p class="eyebrow part-label"><b>I.</b>The Problem</p>
+        <p class="drop">Modern dating platforms have changed the way people meet. Yet for many, the online dating experience has become increasingly disorienting. Conversations begin and disappear just as quickly. Attention becomes fragmented. People often find themselves overwhelmed by options while feeling strangely disconnected from the experience of getting to know another person.</p>
+        <p>The modern dating environment often encourages constant evaluation. People move rapidly from one interaction to the next, carrying the subtle awareness that the next profile is always waiting. Over time, this creates a kind of emotional restlessness that makes sustained curiosity increasingly difficult.</p>
+        <p>The result is not necessarily a lack of connection, but a lack of depth. Many people find themselves exhausted not because they have met too few people, but because the process rarely asks them to slow down long enough to genuinely explore anyone. Emotional investment is not the goal of systems built for perpetual motion.</p>
+      </div>
+    </section>
 
-  <!-- ── PART ONE: THE PROBLEM ── -->
-  <section class="philosophy-section philosophy-section--first">
-    <div class="philosophy-container">
+    <section class="pad section--tight">
+      <div class="wrap" style="max-width: 1100px">
+        <p class="pullquote">Meaningful connection is more likely to emerge when people feel emotionally grounded, psychologically safe, and free from the constant pressure to <em>optimize.</em></p>
+      </div>
+    </section>
 
-      <p class="philosophy-body">
-        Modern dating platforms have changed the way people meet. Yet for many, the online dating experience has become increasingly disorienting. Conversations begin and disappear just as quickly. Attention becomes fragmented. People often find themselves overwhelmed by options while feeling strangely disconnected from the experience of getting to know another person.
-      </p>
+    <section class="pad" style="padding-top: 40px; padding-bottom: 40px">
+      <div class="narrow essay">
+        <p class="eyebrow part-label"><b>II.</b>The Premise</p>
+        <p class="drop">Converge was built around a simple premise: the structure surrounding a relationship matters. Not just compatibility or chemistry, but the conditions under which two people meet, communicate, and slowly come to understand one another.</p>
+        <p>Rather than encouraging endless browsing or continuous matching, the platform is organized around curated cohorts and a limited number of introductions. Our emphasis is on creating conditions that allow people to encounter one another more thoughtfully, with less noise surrounding the process.</p>
+        <p class="statement" style="margin-top: 56px">The goal is not efficiency. <em>It is presence.</em></p>
+      </div>
+    </section>
 
-      <p class="philosophy-body">
-        The modern dating environment often encourages constant evaluation. People move rapidly from one interaction to the next, carrying the subtle awareness that the next profile is always waiting. Over time, this can create a kind of emotional restlessness that makes sustained curiosity increasingly difficult. The result is not necessarily a lack of connection, but a lack of depth. Many people find themselves exhausted not because they have met too few people, but because the process rarely asks them to slow down long enough to genuinely explore anyone. Emotional investment is not the goal of systems built for perpetual motion.
-      </p>
+    <section class="pad" style="padding-top: 100px; padding-bottom: 140px">
+      <div class="narrow essay">
+        <p class="eyebrow part-label"><b>III.</b>What This Is Not</p>
+        <p class="drop">This is not an attempt to reject modern dating outright, nor is it a nostalgic return to traditional courtship. People meet in many ways, and meaningful relationships can emerge from almost anywhere.</p>
+        <p>Converge simply offers an alternative framework for those who feel drawn toward experiences that are steadier, more deliberate, and less performative than the environments they have grown accustomed to online.</p>
+      </div>
+    </section>
 
+    <section class="section tint pad">
+      <div class="wrap split">
+        <img class="media r-4-3" src="images/cafe-listening.webp" width="1536" height="1024" loading="lazy" style="object-position: 45% center"
+             alt="A woman leans in across a café table, listening closely"/>
+        <div>
+          <p class="eyebrow" style="margin-bottom: 32px">The Difference</p>
+          <p class="statement" style="font-size: 30px; line-height: 1.45; margin-bottom: 28px">At its core, Converge is less concerned with producing endless interaction and more interested in restoring a sense of presence to the experience of meeting someone new.</p>
+          <p class="body" style="margin-bottom: 48px">The hope is that people leave having experienced the process itself as calmer, more sincere, and more human — whatever it leads to.</p>
+          <a class="btn btn--dark" href="waitlist.html">Join the Waitlist</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section--tight pad">
+      <div class="wrap">
+        <a class="next-link" href="framework.html">
+          <span><span class="meta">Continue reading</span><strong>Our Framework</strong></span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer pad">
+    <div class="wrap">
+      <div class="footer-top">
+        <a href="index.html" class="logo" aria-label="Converge home"><svg viewBox="0 0 44 56" fill="none" aria-hidden="true"><line x1="2" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><line x1="42" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><line x1="12" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><line x1="32" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><circle cx="22" cy="46" r="3.6" fill="#b09e87"/><circle cx="22" cy="46" r="8" stroke="#b09e87" stroke-width="1"/></svg><span>CONVERGE</span></a>
+        <ul class="footer-nav">
+        <li><a href="philosophy.html">Philosophy</a></li>
+        <li><a href="framework.html">Framework</a></li>
+        <li><a href="beyond-geography.html">Beyond Geography</a></li>
+        <li><a href="trust-and-safety.html">Trust &amp; Safety</a></li>
+        <li><a href="editorials.html">Editorials</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Converge Courtship LLC. All rights reserved.</span>
+        <span class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="mailto:hello@convergecourtship.com">hello@convergecourtship.com</a>
+        </span>
+      </div>
+      <p class="footer-note">Imagery is illustrative and does not depict Converge members.</p>
     </div>
-  </section>
-
-  <!-- ── PULL QUOTE (navy accent) ── -->
-  <section class="philosophy-quote-section">
-    <div class="philosophy-container">
-      <blockquote class="philosophy-pull-quote">
-        "Meaningful connection is more likely to emerge when people feel emotionally grounded, psychologically safe, and free from the constant pressure to optimize."
-      </blockquote>
-    </div>
-  </section>
-
-  <!-- ── PART TWO: THE PREMISE ── -->
-  <section class="philosophy-section">
-    <div class="philosophy-container">
-
-      <p class="philosophy-body">
-        Converge was built around a simple premise: the structure surrounding a relationship matters. Not just compatibility or chemistry, but the conditions under which two people meet, communicate, and slowly come to understand one another. Rather than encouraging endless browsing or continuous matching, the platform is organized around curated cohorts and a limited number of introductions. The goal is not efficiency. It is presence.
-      </p>
-
-      <p class="philosophy-body">
-        Our emphasis is on creating conditions that allow people to encounter one another more thoughtfully and with less noise surrounding the process. Meaningful connection is more likely to emerge when people feel emotionally grounded, psychologically safe, and free from the constant pressure to optimize.
-      </p>
-
-      <p class="philosophy-body">
-        This is not an attempt to reject modern dating outright, nor is it a nostalgic return to traditional courtship. People meet in many ways, and meaningful relationships can emerge from almost anywhere. Converge simply offers an alternative framework for those who feel drawn toward experiences that feel steadier, more deliberate, and less performative than the environments they have grown accustomed to online.
-      </p>
-
-    </div>
-  </section>
-
-  <!-- ── CLOSING (navy accent) ── -->
-  <section class="philosophy-closing-section">
-    <div class="philosophy-container">
-
-      <p class="philosophy-closing-label">The difference</p>
-
-<p class="philosophy-closing-body">
-  At its core, Converge is less concerned with producing endless interaction and more interested in restoring a sense of presence to the experience of meeting someone new.
-</p>
-
-<p class="philosophy-closing-body">
-  The hope is that people leave not only having formed a lifelong connection, but having experienced the process itself as more calm, more sincere, and more human.
-</p>
-
-      <a href="waitlist.html" class="philosophy-cta">Join the Waitlist</a>
-
-    </div>
-  </section>
-
-  <!-- ── FOOTER ── -->
-  <footer class="site-footer">
-    <div class="footer-logo">CONVERGE</div>
-    <ul class="footer-links">
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Terms of Use</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-    <p class="footer-copy">© 2026 Converge. All rights reserved.</p>
   </footer>
 
   <script src="js/script.js"></script>

@@ -1,19 +1,54 @@
 /* ============================================================
-   CONVERGE — Shared JavaScript
-   convergecourtship-site/js/script.js
+   CONVERGE — Shared JavaScript (2026 redesign)
+   js/script.js
    ============================================================ */
 
 'use strict';
 
 /* ────────────────────────────────────────────────────────────
-   LANDING PAGE
-   Runs only when #hero is present (index.html)
+   NAVIGATION — mobile menu
    ──────────────────────────────────────────────────────────── */
-function initLanding() {
-  if (!document.getElementById('hero')) return;
-  // Placeholder for future enhancements
+function initNav() {
+  const toggle = document.getElementById('nav-toggle');
+  const menu   = document.getElementById('mobile-menu');
+  if (!toggle || !menu) return;
+
+  const close = () => {
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open menu');
+    menu.classList.remove('open');
+  };
+  toggle.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') !== 'true';
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    menu.classList.toggle('open', open);
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+  document.addEventListener('click', e => {
+    if (!toggle.contains(e.target) && !menu.contains(e.target)) close();
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  window.addEventListener('resize', () => { if (window.innerWidth > 960) close(); });
 }
 
+/* ────────────────────────────────────────────────────────────
+   FORMS — "Submitting…" state so people can't submit twice
+   Any form with data-submitting="Label…" gets this behaviour.
+   ──────────────────────────────────────────────────────────── */
+function initSubmitStates() {
+  document.querySelectorAll('form[data-submitting]').forEach(form => {
+    form.addEventListener('submit', () => {
+      const btn = form.querySelector('button[type="submit"]');
+      if (!btn) return;
+      // Defer one tick so the browser has already started the native submission.
+      setTimeout(() => {
+        btn.disabled = true;
+        btn.textContent = form.dataset.submitting;
+      }, 0);
+    });
+  });
+}
 
 /* ────────────────────────────────────────────────────────────
    APPLICATION PAGE
@@ -366,7 +401,7 @@ Object.entries(data).forEach(([key, value]) => {
   params.append(key, value);
 });
 
-fetch('https://convergecourtship.com/', {
+fetch('/', {
   method: 'POST',
   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
   body: params.toString()
@@ -423,6 +458,7 @@ function selectRadio(groupId, val) {
   if (cb) {
     cb.checked = true;
     cb.closest('.radio-card')?.classList.add('selected');
+    cb.dispatchEvent(new Event('change', { bubbles: true }));
   }
 }
 
@@ -432,7 +468,10 @@ function selectPill(groupId, el) {
   group.querySelectorAll('.radio-pill').forEach(p => p.classList.remove('selected'));
   el.classList.add('selected');
   const inp = el.querySelector('input');
-  if (inp) inp.checked = true;
+  if (inp) {
+    inp.checked = true;
+    inp.dispatchEvent(new Event('change', { bubbles: true }));
+  }
 }
 
 function toggleAgreement(el) {
@@ -569,50 +608,12 @@ function buildConflictQuestions() {
 }
 
 
+
 /* ────────────────────────────────────────────────────────────
    BOOT
    ──────────────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
-  initLanding();
+  initNav();
+  initSubmitStates();
   initApp();
-});
-
-/* ============================================================
-   NAV HAMBURGER MENU
-   ============================================================ */
-document.addEventListener('DOMContentLoaded', function () {
-
-  const hamburger  = document.getElementById('nav-hamburger');
-  const mobileMenu = document.getElementById('nav-mobile-menu');
-
-  if (hamburger && mobileMenu) {
-
-    hamburger.addEventListener('click', function () {
-      hamburger.classList.toggle('open');
-      mobileMenu.classList.toggle('open');
-    });
-
-    mobileMenu.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        hamburger.classList.remove('open');
-        mobileMenu.classList.remove('open');
-      });
-    });
-
-    document.addEventListener('click', function (e) {
-      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
-        hamburger.classList.remove('open');
-        mobileMenu.classList.remove('open');
-      }
-    });
-  }
-
-  // Highlight active nav link
-  const currentPage = window.location.pathname.split('/').pop();
-  document.querySelectorAll('.nav-links a').forEach(function (link) {
-    if (link.getAttribute('href') === currentPage) {
-      link.classList.add('active');
-    }
-  });
-
 });

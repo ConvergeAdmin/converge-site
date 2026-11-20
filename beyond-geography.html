@@ -3,148 +3,168 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Beyond Geography — Converge. A structured courtship platform built around the idea that meaningful connection may not always exist within immediate proximity."/>
   <title>Beyond Geography | Converge</title>
+  <meta name="description" content="The right person may not live ten minutes away. How Converge approaches distance, relocation and compatibility."/>
+  <meta property="og:title" content="Beyond Geography | Converge"/>
+  <meta property="og:description" content="The right person may not live ten minutes away. How Converge approaches distance, relocation and compatibility."/>
+  <meta property="og:type" content="website"/>
+  <meta name="theme-color" content="#f7f4ef"/>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
 
-  <!-- ── NAV ── -->
-<nav class="site-nav">
-  <a href="index.html" class="nav-logo">C O N V E R G E</a>
- 
-  <!-- Desktop nav links -->
-  <ul class="nav-links">
-    <li><a href="philosophy.html">Our Philosophy</a></li>
-    <li><a href="framework.html">Our Framework</a></li>
-    <li><a href="beyond-geography.html">Beyond Geography</a></li>
-    <li><a href="trust-and-safety.html">Trust & Safety</a></li>
-  </ul>
- 
-  <!-- Right side: CTA + hamburger -->
-  <div class="nav-right">
-    <a href="waitlist.html" class="nav-cta">Join the Waitlist</a>
-    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-</nav>
- 
-<!-- Mobile menu -->
-<div class="nav-mobile-menu" id="nav-mobile-menu">
-  <ul>
-    <li><a href="philosophy.html">Our Philosophy</a></li>
-    <li><a href="framework.html">Our Framework</a></li>
-    <li><a href="beyond-geography.html">Beyond Geography</a></li>
-    <li><a href="trust-and-safety.html">Trust & Safety</a></li>
-    <li><a href="waitlist.html">Join the Waitlist</a></li>
-  </ul>
-</div>
-
-  <!-- ── HERO ── -->
-  <section id="philosophy-hero">
-
-    <svg class="convergence-motif" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <line x1="0"   y1="0"   x2="300" y2="300" stroke="#0f1623" stroke-width="1.2"/>
-      <line x1="600" y1="0"   x2="300" y2="300" stroke="#0f1623" stroke-width="1.2"/>
-      <line x1="0"   y1="80"  x2="300" y2="300" stroke="#0f1623" stroke-width="0.7"/>
-      <line x1="600" y1="80"  x2="300" y2="300" stroke="#0f1623" stroke-width="0.7"/>
-      <line x1="0"   y1="160" x2="300" y2="300" stroke="#0f1623" stroke-width="0.4"/>
-      <line x1="600" y1="160" x2="300" y2="300" stroke="#0f1623" stroke-width="0.4"/>
-      <line x1="0"   y1="240" x2="300" y2="300" stroke="#0f1623" stroke-width="0.2"/>
-      <line x1="600" y1="240" x2="300" y2="300" stroke="#0f1623" stroke-width="0.2"/>
-      <circle cx="300" cy="300" r="4"  fill="#b09e87" opacity="0.5"/>
-      <circle cx="300" cy="300" r="12" stroke="#b09e87" stroke-width="0.6" opacity="0.25"/>
-      <circle cx="300" cy="300" r="28" stroke="#b09e87" stroke-width="0.4" opacity="0.12"/>
-    </svg>
-
-    <div class="container hero-inner">
-      <p class="hero-eyebrow fade-up">Beyond Geography</p>
-      <h1 class="hero-headline fade-up">
-        The right person<br/>
-        may not live<br/>
-        <em>ten minutes away.</em>
-      </h1>
+  <a class="sr-only" href="#main">Skip to content</a>
+  <header class="site-nav pad">
+    <a href="index.html" class="logo" aria-label="Converge home"><svg viewBox="0 0 44 56" fill="none" aria-hidden="true"><line x1="2" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><line x1="42" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><line x1="12" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><line x1="32" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><circle cx="22" cy="46" r="3.6" fill="#b09e87"/><circle cx="22" cy="46" r="8" stroke="#b09e87" stroke-width="1"/></svg><span>CONVERGE</span></a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+      <li><a href="philosophy.html">Philosophy</a></li>
+      <li><a href="framework.html">Framework</a></li>
+      <li><a href="beyond-geography.html" aria-current="page">Beyond Geography</a></li>
+      <li><a href="trust-and-safety.html">Trust &amp; Safety</a></li>
+      <li><a href="editorials.html">Editorials</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <a href="waitlist.html" class="btn btn--dark nav-cta">Join the Waitlist</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-
-  </section>
-
-  <!-- ── PART ONE ── -->
-  <section class="philosophy-section philosophy-section--first">
-    <div class="philosophy-container">
-
-      <p class="philosophy-body">
-        For most of human history, people formed relationships within extremely small geographic circles. Communities were local, movement was limited, and the likelihood of meeting someone was deeply tied to physical proximity. Even today, many modern dating platforms still operate around the assumption that compatibility should primarily exist within a narrow radius — often reducing the search for partnership to whoever happens to live nearby.
-      </p>
-
-      <p class="philosophy-body">
-        But modern life no longer functions that way. People move frequently. Careers relocate them across cities and countries. Friendships are maintained across time zones with ease. Entire communities now exist digitally rather than physically. And yet, when it comes to romantic partnership, many people still operate with inherited geographic assumptions that no longer reflect the reality of modern times.
-      </p>
-
-    </div>
-  </section>
-
-  <!-- ── PULL QUOTE (navy) ── -->
-  <section class="philosophy-quote-section">
-    <div class="philosophy-container">
-      <blockquote class="philosophy-pull-quote">
-        "Meaningful connection may not always exist within immediate proximity."
-      </blockquote>
-    </div>
-  </section>
-
-  <!-- ── PART TWO ── -->
-  <section class="philosophy-section">
-    <div class="philosophy-container">
-
-      <p class="philosophy-body">
-        Converge recognizes that the person with whom you share genuine emotional compatibility, intellectual resonance, attraction, humor, timing, and long-term alignment may not live ten minutes away. They may not even live in your city at all.
-      </p>
-
-      <p class="philosophy-body">
-        That reality introduces complexity, of course. Geography still matters. Shared lives eventually require physical presence, practical planning, and real-world integration. Converge does not ignore those realities, nor does it romanticize distance for its own sake.
-      </p>
-
-      <p class="philosophy-body">
-        What it does reject is the assumption that geography should automatically determine the boundaries of possibility before two people have even had the chance to meaningfully know one another. The platform is designed to create thoughtful space for connection first — allowing compatibility, communication, curiosity, and emotional alignment to emerge before proximity alone determines whether a relationship is worth exploring.
-      </p>
-
-    </div>
-  </section>
-
-  <!-- ── CLOSING (navy) ── -->
-  <section class="philosophy-closing-section">
-    <div class="philosophy-container">
-
-      <p class="philosophy-closing-label">No assumptions</p>
-
-      <p class="philosophy-closing-body">
-        For some people, the right relationship may ultimately exist nearby. For others, it may begin somewhere entirely unexpected.
-      </p>
-
-      <p class="philosophy-closing-body">
-        Converge simply creates room for both possibilities to exist.
-      </p>
-
-      <a href="waitlist.html" class="philosophy-cta">Join the Waitlist</a>
-
-    </div>
-  </section>
-
-  <!-- ── FOOTER ── -->
-  <footer class="site-footer">
-    <div class="footer-logo">CONVERGE</div>
-    <ul class="footer-links">
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Terms of Use</a></li>
-      <li><a href="#">Contact</a></li>
+  </header>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="philosophy.html">Philosophy</a></li>
+      <li><a href="framework.html">Framework</a></li>
+      <li><a href="beyond-geography.html" aria-current="page">Beyond Geography</a></li>
+      <li><a href="trust-and-safety.html">Trust &amp; Safety</a></li>
+      <li><a href="editorials.html">Editorials</a></li>
+      <li><a href="waitlist.html">Join the Waitlist</a></li>
     </ul>
-    <p class="footer-copy">© 2026 Converge. All rights reserved.</p>
+  </div>
+
+  <main id="main">
+
+    <section class="page-hero pad" style="position: relative; overflow: hidden; padding-bottom: 140px">
+      <svg class="radius-art" viewBox="0 0 720 720" fill="none" aria-hidden="true">
+        <circle cx="300" cy="380" r="70" stroke="#b09e87" stroke-width="1"/>
+        <circle cx="300" cy="380" r="150" stroke="#b09e87" stroke-width="0.8" stroke-dasharray="2 6"/>
+        <circle cx="300" cy="380" r="250" stroke="#b09e87" stroke-width="0.6" stroke-dasharray="2 8" opacity="0.7"/>
+        <circle cx="300" cy="380" r="350" stroke="#b09e87" stroke-width="0.5" stroke-dasharray="2 10" opacity="0.45"/>
+        <circle cx="300" cy="380" r="4" fill="#0f1623"/>
+        <line x1="300" y1="380" x2="560" y2="150" stroke="#0f1623" stroke-width="0.8"/>
+        <circle cx="560" cy="150" r="5" fill="#7a6650"/>
+        <circle cx="560" cy="150" r="14" stroke="#7a6650" stroke-width="0.8"/>
+        <text x="318" y="372" font-family="Jost, sans-serif" font-size="10" letter-spacing="2" fill="#7a8090">10 MI</text>
+      </svg>
+      <div class="wrap" style="position: relative">
+        <p class="eyebrow fade-up">Beyond Geography</p>
+        <h1 class="display fade-up d1" style="max-width: 820px; margin-bottom: 48px">The right person may not live <em>ten minutes away.</em></h1>
+        <p class="lede fade-up d2" style="max-width: 520px; font-size: 26px">They may not even live in your city at all.</p>
+      </div>
+    </section>
+
+    <section class="pad" style="padding-bottom: 140px">
+      <div class="wrap then-now">
+        <div>
+          <p class="word">Then</p>
+          <p>For most of human history, relationships formed within small geographic circles. Communities were local, movement was limited, and meeting someone was tied to physical proximity. Many dating platforms still work this way — reducing partnership to whoever happens to live nearby.</p>
+        </div>
+        <div>
+          <p class="word">Now</p>
+          <p>Modern life no longer works that way. People move often. Careers carry them across cities and countries. Friendships are kept across time zones with ease. Yet when it comes to partnership, many still carry inherited geographic assumptions that no longer reflect how they actually live.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section navy pad">
+      <div class="wrap split split--start">
+        <div>
+          <p class="eyebrow">What Distance Cannot Measure</p>
+          <h2 class="h2">Meaningful connection may not always exist <em>within immediate proximity.</em></h2>
+          <p class="body" style="max-width: 480px">The person with whom you share genuine compatibility may be anywhere. None of what matters most is measured in miles.</p>
+        </div>
+        <ul class="measure-list">
+          <li><span>01</span>Emotional compatibility</li>
+          <li><span>02</span>Intellectual resonance</li>
+          <li><span>03</span>Attraction</li>
+          <li><span>04</span>Humor</li>
+          <li><span>05</span>Timing</li>
+          <li><span>06</span>Long-term alignment</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section pad">
+      <div class="wrap split">
+        <img class="media r-4-5" src="images/station-call.webp" width="1199" height="1312" loading="lazy" style="object-position: center 30%"
+             alt="A woman in a camel coat smiles during a phone call in a busy station waiting area"/>
+        <div>
+          <p class="eyebrow">Honest About Distance</p>
+          <h2 class="h2">Geography still matters. <em>It just shouldn't decide first.</em></h2>
+          <p class="body">Shared lives eventually require physical presence, practical planning and real-world integration. Converge does not ignore those realities, nor does it romanticize distance for its own sake.</p>
+          <p class="body">What it rejects is the assumption that geography should set the boundaries of possibility before two people have had the chance to meaningfully know one another.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tint pad">
+      <div class="wrap">
+        <h2 class="h2" style="margin-bottom: 80px">In <em>practice.</em></h2>
+        <div class="trio">
+          <div><h3 class="h3">Remote by design</h3><p class="small">The early stages unfold through audio and video calls on the platform, so distance never blocks the first conversation.</p></div>
+          <div><h3 class="h3">Considered, not ignored</h3><p class="small">Where you hope to live in the coming years — and whether you would relocate — informs introductions. Relocation is never required.</p></div>
+          <div><h3 class="h3">United States &amp; Canada</h3><p class="small">Converge is currently open to residents of both countries. International expansion is planned; anyone may join the waitlist.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section navy pad center">
+      <div class="narrow" style="display: flex; flex-direction: column; align-items: center">
+        <p class="eyebrow" style="margin-bottom: 32px">No Assumptions</p>
+        <p class="statement" style="margin-bottom: 24px">For some, the right relationship exists nearby. For others, it begins <em>somewhere entirely unexpected.</em></p>
+        <p class="body" style="margin-bottom: 48px">Converge simply creates room for both.</p>
+        <a class="btn btn--light" href="waitlist.html">Join the Waitlist</a>
+      </div>
+    </section>
+
+    <section class="section--tight pad">
+      <div class="wrap">
+        <a class="next-link" href="trust-and-safety.html">
+          <span><span class="meta">Continue reading</span><strong>Trust &amp; Safety</strong></span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer pad">
+    <div class="wrap">
+      <div class="footer-top">
+        <a href="index.html" class="logo" aria-label="Converge home"><svg viewBox="0 0 44 56" fill="none" aria-hidden="true"><line x1="2" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><line x1="42" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><line x1="12" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><line x1="32" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><circle cx="22" cy="46" r="3.6" fill="#b09e87"/><circle cx="22" cy="46" r="8" stroke="#b09e87" stroke-width="1"/></svg><span>CONVERGE</span></a>
+        <ul class="footer-nav">
+        <li><a href="philosophy.html">Philosophy</a></li>
+        <li><a href="framework.html">Framework</a></li>
+        <li><a href="beyond-geography.html">Beyond Geography</a></li>
+        <li><a href="trust-and-safety.html">Trust &amp; Safety</a></li>
+        <li><a href="editorials.html">Editorials</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Converge Courtship LLC. All rights reserved.</span>
+        <span class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="mailto:hello@convergecourtship.com">hello@convergecourtship.com</a>
+        </span>
+      </div>
+      <p class="footer-note">Imagery is illustrative and does not depict Converge members.</p>
+    </div>
   </footer>
 
   <script src="js/script.js"></script>

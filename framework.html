@@ -3,152 +3,175 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Our Framework — Converge. A structured courtship platform designed for depth, not volume."/>
   <title>Our Framework | Converge</title>
+  <meta name="description" content="Six deliberate stages, voice first. How Converge introductions, calls and Full Attention work."/>
+  <meta property="og:title" content="Our Framework | Converge"/>
+  <meta property="og:description" content="Six deliberate stages, voice first. How Converge introductions, calls and Full Attention work."/>
+  <meta property="og:type" content="website"/>
+  <meta name="theme-color" content="#f7f4ef"/>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
 
-  <!-- ── NAV ── -->
- <nav class="site-nav">
-  <a href="index.html" class="nav-logo">C O N V E R G E</a>
- 
-  <!-- Desktop nav links -->
-  <ul class="nav-links">
-    <li><a href="philosophy.html">Our Philosophy</a></li>
-    <li><a href="framework.html">Our Framework</a></li>
-    <li><a href="beyond-geography.html">Beyond Geography</a></li>
-    <li><a href="trust-and-safety.html">Trust & Safety</a></li>
-  </ul>
- 
-  <!-- Right side: CTA + hamburger -->
-  <div class="nav-right">
-    <a href="waitlist.html" class="nav-cta">Join the Waitlist</a>
-    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-</nav>
- 
-<!-- Mobile menu -->
-<div class="nav-mobile-menu" id="nav-mobile-menu">
-  <ul>
-    <li><a href="philosophy.html">Our Philosophy</a></li>
-    <li><a href="framework.html">Our Framework</a></li>
-    <li><a href="beyond-geography.html">Beyond Geography</a></li>
-    <li><a href="trust-and-safety.html">Trust & Safety</a></li>
-    <li><a href="waitlist.html">Join the Waitlist</a></li>
-  </ul>
-</div>
-
-  <!-- ── HERO ── -->
-  <section id="philosophy-hero">
-
-    <svg class="convergence-motif" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <line x1="0"   y1="0"   x2="300" y2="300" stroke="#0f1623" stroke-width="1.2"/>
-      <line x1="600" y1="0"   x2="300" y2="300" stroke="#0f1623" stroke-width="1.2"/>
-      <line x1="0"   y1="80"  x2="300" y2="300" stroke="#0f1623" stroke-width="0.7"/>
-      <line x1="600" y1="80"  x2="300" y2="300" stroke="#0f1623" stroke-width="0.7"/>
-      <line x1="0"   y1="160" x2="300" y2="300" stroke="#0f1623" stroke-width="0.4"/>
-      <line x1="600" y1="160" x2="300" y2="300" stroke="#0f1623" stroke-width="0.4"/>
-      <line x1="0"   y1="240" x2="300" y2="300" stroke="#0f1623" stroke-width="0.2"/>
-      <line x1="600" y1="240" x2="300" y2="300" stroke="#0f1623" stroke-width="0.2"/>
-      <circle cx="300" cy="300" r="4"  fill="#b09e87" opacity="0.5"/>
-      <circle cx="300" cy="300" r="12" stroke="#b09e87" stroke-width="0.6" opacity="0.25"/>
-      <circle cx="300" cy="300" r="28" stroke="#b09e87" stroke-width="0.4" opacity="0.12"/>
-    </svg>
-
-    <div class="container hero-inner">
-      <p class="hero-eyebrow fade-up">Our Framework</p>
-      <h1 class="hero-headline fade-up">
-        Designed for<br/>
-        depth, not<br/>
-        <em>volume.</em>
-      </h1>
+  <a class="sr-only" href="#main">Skip to content</a>
+  <header class="site-nav pad">
+    <a href="index.html" class="logo" aria-label="Converge home"><svg viewBox="0 0 44 56" fill="none" aria-hidden="true"><line x1="2" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><line x1="42" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><line x1="12" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><line x1="32" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><circle cx="22" cy="46" r="3.6" fill="#b09e87"/><circle cx="22" cy="46" r="8" stroke="#b09e87" stroke-width="1"/></svg><span>CONVERGE</span></a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+      <li><a href="philosophy.html">Philosophy</a></li>
+      <li><a href="framework.html" aria-current="page">Framework</a></li>
+      <li><a href="beyond-geography.html">Beyond Geography</a></li>
+      <li><a href="trust-and-safety.html">Trust &amp; Safety</a></li>
+      <li><a href="editorials.html">Editorials</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <a href="waitlist.html" class="btn btn--dark nav-cta">Join the Waitlist</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-
-  </section>
-
-  <!-- ── PART ONE: THE PROBLEM ── -->
-  <section class="philosophy-section philosophy-section--first">
-    <div class="philosophy-container">
-
-      <p class="philosophy-body">
-        Modern dating platforms are built around immediacy. Conversations begin quickly, overlap constantly, and often disappear before any real understanding has had time to emerge. The experience can become less about connection itself and more about maintaining momentum — moving from interaction to interaction with very little structure or intentionality surrounding the process.
-      </p>
-
-      <p class="philosophy-body">
-        Converge was designed differently from the beginning. Rather than functioning as an open marketplace of endless profiles and continuous matching, the platform is organized around carefully curated cohorts and a limited number of introductions. The intention is not to restrict possibility, but to create enough focus and emotional space for genuine exploration to occur.
-      </p>
-
-    </div>
-  </section>
-
-  <!-- ── PULL QUOTE (navy) ── -->
-  <section class="philosophy-quote-section">
-    <div class="philosophy-container">
-      <blockquote class="philosophy-pull-quote">
-        "A quieter environment where people can focus more fully on the experience of getting to know one another."
-      </blockquote>
-    </div>
-  </section>
-
-  <!-- ── PART TWO: HOW IT WORKS ── -->
-  <section class="philosophy-section">
-    <div class="philosophy-container">
-
-      <p class="philosophy-body">
-        Members are matched based on a wide range of factors, including values alignment, long-term life goals, communication patterns, emotional temperament, and broader relational compatibility. Chemistry will always remain unpredictable, and no framework can guarantee connection. What Converge attempts to do is create more thoughtful starting conditions — conditions that encourage people to move beyond immediate judgment and remain open long enough for depth, nuance, and curiosity to develop.
-      </p>
-
-      <p class="philosophy-body">
-        Each participant receives a small number of curated introductions at the beginning of the cohort experience. From there, the pace intentionally slows. Early conversations unfold through audio-only calls — an intentional choice. Without the distraction of visual presentation, people tend to listen more carefully and speak more honestly. As connections deepen and both parties choose to continue, the experience gradually opens to include video. That progression is earned, not assumed.
-      </p>
-
-       <p class="philosophy-body">
-        The early stages of conversation remain intentionally contained within the platform. This creates distance from many of the performative dynamics that now shape online interaction: rapid-fire texting, social media migration, fragmented communication, and the subtle pressure to immediately define or escalate a connection before it has had time to breathe.
-      </p>
-
-      <p class="philosophy-body">
-        The process itself is structured, but not rigid. Participants are encouraged to approach each conversation with openness and curiosity rather than immediate evaluation. Not every connection will become romantic, and not every introduction will unfold at the same pace. Some conversations may begin slowly before developing surprising depth over time. Others may bring clarity more quickly. The framework is designed to create room for both.
-      </p>
-
-    </div>
-  </section>
-
-  <!-- ── CLOSING (navy) ── -->
-  <section class="philosophy-closing-section">
-    <div class="philosophy-container">
-
-      <p class="philosophy-closing-label">Built into the structure</p>
-
-      <p class="philosophy-closing-body">
-        Converge places importance on respectful closure. If a connection does not progress, participants are encouraged to communicate that directly and graciously rather than disappearing into ambiguity. Emotional maturity is not treated as an idealized personality trait within the platform. It is built into the structure itself.
-      </p>
-
-      <p class="philosophy-closing-body">
-        Ultimately, the framework exists to support a more grounded relational experience — one where the process of meeting people feels less rushed, less disposable, and more capable of sustaining genuine emotional presence from beginning to end.
-      </p>
-
-      <a href="waitlist.html" class="philosophy-cta">Join the Waitlist</a>
-
-    </div>
-  </section>
-
-  <!-- ── FOOTER ── -->
-  <footer class="site-footer">
-    <div class="footer-logo">CONVERGE</div>
-    <ul class="footer-links">
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Terms of Use</a></li>
-      <li><a href="#">Contact</a></li>
+  </header>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="philosophy.html">Philosophy</a></li>
+      <li><a href="framework.html" aria-current="page">Framework</a></li>
+      <li><a href="beyond-geography.html">Beyond Geography</a></li>
+      <li><a href="trust-and-safety.html">Trust &amp; Safety</a></li>
+      <li><a href="editorials.html">Editorials</a></li>
+      <li><a href="waitlist.html">Join the Waitlist</a></li>
     </ul>
-    <p class="footer-copy">© 2026 Converge. All rights reserved.</p>
+  </div>
+
+  <main id="main">
+
+    <section class="page-hero pad">
+      <div class="wrap split split--end">
+        <div>
+          <p class="eyebrow fade-up">Our Framework</p>
+          <h1 class="display fade-up d1">Designed for depth, not <em>volume.</em></h1>
+        </div>
+        <div class="fade-up d2">
+          <p class="body">Modern dating platforms are built around immediacy. Conversations begin quickly, overlap constantly, and often disappear before any real understanding has had time to emerge.</p>
+          <p class="body">Converge was designed differently from the beginning: curated cohorts, a limited number of introductions, and a pace that leaves room for genuine exploration.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pad" style="padding-bottom: 140px">
+      <div class="wrap phases">
+        <div><p class="tag">Stages 01 – 03</p><p class="name">Voice</p><p>An introduction and two audio-only calls. You listen before you look.</p></div>
+        <div><p class="tag">Stage 04</p><p class="name">Sight</p><p>Video opens only when both people choose to continue.</p></div>
+        <div><p class="tag">Stages 05 – 06</p><p class="name">Commitment</p><p>One connection, full attention, and the move into real-world courtship.</p></div>
+      </div>
+    </section>
+
+    <section class="section navy pad">
+      <div class="wrap">
+        <p class="eyebrow" style="margin-bottom: 24px">The Six Stages</p>
+        <h2 class="h2" style="max-width: 760px; margin-bottom: 88px">Each stage deepens clarity <em>before it deepens investment.</em></h2>
+        <div class="stage-rows">
+          <div class="stage-row">
+            <p class="num">01</p>
+            <div><h3 class="h3">Curated Introduction</h3><p class="small">Converge reviews compatibility across values, long-term life goals, communication patterns and emotional temperament — not surface-level preference. Each cohort member then receives up to three introductions.</p></div>
+            <div class="stage-facts"><p><b>Format</b> — Introduction</p><p>Up to three per cohort</p></div>
+          </div>
+          <div class="stage-row">
+            <p class="num">02</p>
+            <div><h3 class="h3">The First Call</h3><p class="small">Thirty minutes, audio only, guided by structured prompts shared in advance. The conversation is intentional, not improvisational.</p></div>
+            <div class="stage-facts"><p><b>Format</b> — Audio</p><p>30 minutes · Guided</p></div>
+          </div>
+          <div class="stage-row">
+            <p class="num">03</p>
+            <div><h3 class="h3">The Second Call</h3><p class="small">Sixty minutes, still audio only, and unguided. By now there is enough shared context to go further — and carrying the conversation yourselves is a useful signal in its own right.</p></div>
+            <div class="stage-facts"><p><b>Format</b> — Audio</p><p>60 minutes · Unguided</p></div>
+          </div>
+          <div class="stage-row">
+            <p class="num">04</p>
+            <div><h3 class="h3">Open Exploration</h3><p class="small">Both of you have chosen to continue, and video unlocks for the first time. Connections remain concurrent — no one is asked to close anything yet. That progression is earned, not assumed.</p></div>
+            <div class="stage-facts"><p><b>Format</b> — Video</p><p>Up to 60 minutes · Self-directed</p></div>
+          </div>
+          <div class="stage-row">
+            <p class="num">05</p>
+            <div><h3 class="h3">Full Attention</h3><p class="small">A mutual, active choice. Both people close every other connection — with an honest message to each — and give this one their full attention. Contact details can now be exchanged. This is where real-world courtship begins.</p></div>
+            <div class="stage-facts"><p><b>Format</b> — Open</p><p>One connection only</p></div>
+          </div>
+          <div class="stage-row">
+            <p class="num">06</p>
+            <div><h3 class="h3">Real-World Integration</h3><p class="small">Optional relationship modules, first-meeting guidance and resources for the move from courtship to partnership. Converge does not prescribe outcomes — it equips members to reach them deliberately.</p></div>
+            <div class="stage-facts"><p><b>Format</b> — Optional</p><p>Guidance and resources</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pad">
+      <div class="wrap split">
+        <img class="media r-4-5" src="images/window-call.webp" width="1199" height="1312" loading="lazy" style="object-position: 55% center"
+             alt="A man by a window smiles with his eyes closed as he listens on a phone call"/>
+        <div>
+          <p class="eyebrow">Why Voice First</p>
+          <p class="statement" style="font-style: italic; margin-bottom: 40px">Without the distraction of visual presentation, people tend to listen more carefully — and speak more honestly.</p>
+          <p class="body">Early conversations also stay within the platform. That creates distance from the performative dynamics that shape so much of online interaction: rapid-fire texting, social media migration, and the pressure to define a connection before it has had time to breathe.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tint pad">
+      <div class="wrap">
+        <h2 class="h2" style="max-width: 760px; margin-bottom: 80px">Structured, <em>but not rigid.</em></h2>
+        <div class="trio">
+          <div><h3 class="h3">Thoughtful starting conditions</h3><p class="small">Chemistry will always be unpredictable, and no framework can guarantee connection. The aim is to help people stay open long enough for depth and curiosity to develop.</p></div>
+          <div><h3 class="h3">Every pace is valid</h3><p class="small">Not every connection becomes romantic. Some conversations begin slowly and develop surprising depth; others bring clarity quickly. The framework makes room for both.</p></div>
+          <div><h3 class="h3">Respectful closure</h3><p class="small">When a connection does not progress, members say so directly and graciously. Emotional maturity is not treated as an ideal trait here. It is built into the structure itself.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section navy pad center">
+      <div class="narrow" style="display: flex; flex-direction: column; align-items: center">
+        <p class="statement" style="margin-bottom: 40px">A process that feels less rushed, less disposable, and more capable of sustaining genuine presence <em>from beginning to end.</em></p>
+        <a class="btn btn--light" href="waitlist.html">Join the Waitlist</a>
+      </div>
+    </section>
+
+    <section class="section--tight pad">
+      <div class="wrap">
+        <a class="next-link" href="beyond-geography.html">
+          <span><span class="meta">Continue reading</span><strong>Beyond Geography</strong></span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer pad">
+    <div class="wrap">
+      <div class="footer-top">
+        <a href="index.html" class="logo" aria-label="Converge home"><svg viewBox="0 0 44 56" fill="none" aria-hidden="true"><line x1="2" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><line x1="42" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><line x1="12" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><line x1="32" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><circle cx="22" cy="46" r="3.6" fill="#b09e87"/><circle cx="22" cy="46" r="8" stroke="#b09e87" stroke-width="1"/></svg><span>CONVERGE</span></a>
+        <ul class="footer-nav">
+        <li><a href="philosophy.html">Philosophy</a></li>
+        <li><a href="framework.html">Framework</a></li>
+        <li><a href="beyond-geography.html">Beyond Geography</a></li>
+        <li><a href="trust-and-safety.html">Trust &amp; Safety</a></li>
+        <li><a href="editorials.html">Editorials</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Converge Courtship LLC. All rights reserved.</span>
+        <span class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="mailto:hello@convergecourtship.com">hello@convergecourtship.com</a>
+        </span>
+      </div>
+      <p class="footer-note">Imagery is illustrative and does not depict Converge members.</p>
+    </div>
   </footer>
 
   <script src="js/script.js"></script>

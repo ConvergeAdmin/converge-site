@@ -3,14 +3,22 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Converge — Application for Membership. A structured courtship platform for adults ready to build a life together."/>
-  <title>Converge — Application for Membership</title>
+  <title>Application for Membership | Converge</title>
+  <meta name="description" content="Converge application for membership."/>
+  <meta name="robots" content="noindex, nofollow"/>
+  <meta property="og:title" content="Application for Membership | Converge"/>
+  <meta property="og:description" content="Converge application for membership."/>
+  <meta property="og:type" content="website"/>
+  <meta name="theme-color" content="#f7f4ef"/>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="css/application.css"/>
 </head>
 <body>
+
   
 <!-- Netlify form detection — do not remove -->
 <form name="converge-application" netlify netlify-honeypot="bot-field" hidden>
@@ -63,7 +71,7 @@
 
   <!-- ── APP HEADER ── -->
   <header class="app-header">
-    <a href="index.html" class="nav-logo">C O N V E R G E</a>
+    <a href="index.html" class="logo" aria-label="Converge home"><svg viewBox="0 0 44 56" fill="none" aria-hidden="true"><line x1="2" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><line x1="42" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><line x1="12" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><line x1="32" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><circle cx="22" cy="46" r="3.6" fill="#b09e87"/><circle cx="22" cy="46" r="8" stroke="#b09e87" stroke-width="1"/></svg><span>CONVERGE</span></a>
     <span class="header-section-label" id="header-section-name">Application for Membership</span>
   </header>
 
@@ -138,6 +146,10 @@
               <input type="radio" name="q1" value="open"/>
               <div class="radio-card-label">Long-term partnership — marriage open</div>
             </label>
+            <label class="radio-card" onclick="selectRadio('q1-group','not-open')">
+              <input type="radio" name="q1" value="not-open"/>
+              <div class="radio-card-label">Long-term partnership — not open to marriage</div>
+            </label>
             <label class="radio-card" onclick="selectRadio('q1-group','unsure')">
               <input type="radio" name="q1" value="unsure"/>
               <div class="radio-card-label">I am not certain yet</div>
@@ -155,7 +167,7 @@
           <label class="field-label">If you met the right person, how soon would you want to begin building a life together?</label>
           <div class="radio-row" id="q2-group">
             <label class="radio-pill" onclick="selectPill('q2-group',this)"><input type="radio" name="q2" value="1-2yr"/>1–2 years</label>
-            <label class="radio-pill" onclick="selectPill('q2-group',this)"><input type="radio" name="q2" value="3-5yr"/>3–5 years</label>
+            <label class="radio-pill" onclick="selectPill('q2-group',this)"><input type="radio" name="q2" value="3plus"/>3+ years</label>
             <label class="radio-pill" onclick="selectPill('q2-group',this)"><input type="radio" name="q2" value="flex"/>Flexible but intentional</label>
           </div>
         </div>
@@ -305,12 +317,31 @@
 
         <!-- Children -->
         <div class="field-group">
+          <label class="field-label">Do you have children?</label>
+          <div class="radio-row" id="q11b-group">
+            <label class="radio-pill" onclick="selectPill('q11b-group',this)"><input type="radio" name="q11b" value="yes"/>Yes</label>
+            <label class="radio-pill" onclick="selectPill('q11b-group',this)"><input type="radio" name="q11b" value="no"/>No</label>
+          </div>
+        </div>
+
+        <hr class="field-divider"/>
+
+        <div class="field-group">
           <label class="field-label">Do you want children?</label>
           <div class="radio-row" id="q11-group">
             <label class="radio-pill" onclick="selectPill('q11-group',this)"><input type="radio" name="q11" value="yes"/>Yes</label>
             <label class="radio-pill" onclick="selectPill('q11-group',this)"><input type="radio" name="q11" value="no"/>No</label>
             <label class="radio-pill" onclick="selectPill('q11-group',this)"><input type="radio" name="q11" value="undecided"/>Undecided</label>
-            <label class="radio-pill" onclick="selectPill('q11-group',this)"><input type="radio" name="q11" value="open-partner"/>Open to a partner with children</label>
+          </div>
+        </div>
+
+        <hr class="field-divider"/>
+
+        <div class="field-group">
+          <label class="field-label">Are you open to a partner who has children?</label>
+          <div class="radio-row" id="q11c-group">
+            <label class="radio-pill" onclick="selectPill('q11c-group',this)"><input type="radio" name="q11c" value="yes"/>Yes</label>
+            <label class="radio-pill" onclick="selectPill('q11c-group',this)"><input type="radio" name="q11c" value="no"/>No</label>
           </div>
         </div>
 
@@ -454,31 +485,15 @@
 
         <hr class="field-divider"/>
 
-        <!-- Active connections -->
-        <div class="field-group">
-          <label class="field-label">How many active connections are you willing to maintain simultaneously?</label>
-          <span class="field-sublabel">Converge permits a maximum of three. This question gauges your orientation.</span>
-          <div class="radio-row" id="q16-group">
-            <label class="radio-pill" onclick="selectPill('q16-group',this)"><input type="radio" name="q16" value="1"/>One at a time</label>
-            <label class="radio-pill" onclick="selectPill('q16-group',this)"><input type="radio" name="q16" value="2"/>Up to two</label>
-            <label class="radio-pill" onclick="selectPill('q16-group',this)"><input type="radio" name="q16" value="3"/>Up to three</label>
-          </div>
-          <div class="callout" style="margin-top:16px">
-            The connection limit is a feature of Converge, not a restriction. It reflects the quality of attention each person deserves.
-          </div>
-        </div>
-
-        <hr class="field-divider"/>
-
         <!-- Exclusivity readiness -->
         <div class="field-group">
-          <label class="field-label">If you move into Exclusive Exploration with someone, are you prepared to close all other active connections?</label>
+          <label class="field-label">If you move into Full Attention with someone, are you prepared to close all other active connections?</label>
           <div class="radio-row" id="q17-group">
             <label class="radio-pill" onclick="selectPill('q17-group',this)"><input type="radio" name="q17" value="yes"/>Yes — I understand this is required</label>
             <label class="radio-pill" onclick="selectPill('q17-group',this)"><input type="radio" name="q17" value="no"/>No — I am not prepared for this</label>
           </div>
           <div class="callout" id="q17-warn" style="display:none;margin-top:12px">
-            <strong>Important:</strong> Exclusive Exploration requires closing other connections without exception. Please consider whether you are ready to proceed before continuing.
+            <strong>Important:</strong> Full Attention requires closing other connections without exception. Please consider whether you are ready to proceed before continuing.
           </div>
         </div>
 
@@ -518,8 +533,12 @@
           <br/><br/>
           <div class="agreement-list" id="agreement-list">
             <label class="agreement-item" onclick="toggleAgreement(this)">
+              <input type="checkbox" name="agree" value="age"/>
+              <span class="agreement-text">I confirm that I am 24 years of age or older.</span>
+            </label>
+            <label class="agreement-item" onclick="toggleAgreement(this)">
               <input type="checkbox" name="agree" value="audio"/>
-              <span class="agreement-text">I understand that the first two calls within Converge are audio-only. Video is not available until Exclusive Exploration is entered by mutual decision.</span>
+              <span class="agreement-text">I understand that the first two calls within Converge are audio-only. Video becomes available only in Open Exploration, and only when both people agree.</span>
             </label>
             <label class="agreement-item" onclick="toggleAgreement(this)">
               <input type="checkbox" name="agree" value="off-platform"/>
@@ -531,7 +550,7 @@
             </label>
             <label class="agreement-item" onclick="toggleAgreement(this)">
               <input type="checkbox" name="agree" value="exclusivity"/>
-              <span class="agreement-text">I understand that entering Exclusive Exploration requires closing all other active connections before proceeding. This is a condition, not a preference.</span>
+              <span class="agreement-text">I understand that entering Full Attention requires closing all other active connections, with an honest closing message to each, before proceeding. This is a condition, not a preference.</span>
             </label>
             <label class="agreement-item" onclick="toggleAgreement(this)">
               <input type="checkbox" name="agree" value="endings"/>
@@ -579,7 +598,7 @@
           </div>
           <div class="confirm-detail">
             <p class="confirm-detail-label">Cohort Decision</p>
-            <p class="confirm-detail-val">2025 Season — notifications by email</p>
+            <p class="confirm-detail-val">Next cohort — notifications by email</p>
           </div>
           <div class="confirm-detail">
             <p class="confirm-detail-label">Annual Membership</p>
@@ -599,15 +618,28 @@
 
   </main>
 
-  <!-- ── FOOTER ── -->
-  <footer class="site-footer">
-    <div class="footer-logo">CONVERGE</div>
-    <ul class="footer-links">
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Terms of Use</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-    <p class="footer-copy">© 2025 Converge. All rights reserved.</p>
+  <footer class="site-footer pad">
+    <div class="wrap">
+      <div class="footer-top">
+        <a href="index.html" class="logo" aria-label="Converge home"><svg viewBox="0 0 44 56" fill="none" aria-hidden="true"><line x1="2" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><line x1="42" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><line x1="12" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><line x1="32" y1="2" x2="22" y2="46" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><circle cx="22" cy="46" r="3.6" fill="#b09e87"/><circle cx="22" cy="46" r="8" stroke="#b09e87" stroke-width="1"/></svg><span>CONVERGE</span></a>
+        <ul class="footer-nav">
+        <li><a href="philosophy.html">Philosophy</a></li>
+        <li><a href="framework.html">Framework</a></li>
+        <li><a href="beyond-geography.html">Beyond Geography</a></li>
+        <li><a href="trust-and-safety.html">Trust &amp; Safety</a></li>
+        <li><a href="editorials.html">Editorials</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Converge Courtship LLC. All rights reserved.</span>
+        <span class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="mailto:hello@convergecourtship.com">hello@convergecourtship.com</a>
+        </span>
+      </div>
+      <p class="footer-note">Imagery is illustrative and does not depict Converge members.</p>
+    </div>
   </footer>
 
   <script src="js/script.js"></script>
